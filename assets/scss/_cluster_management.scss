@@ -1,0 +1,51 @@
+.zones-management {
+    &__zone {
+        & + & {
+            padding-top: $unit;
+        }
+    }
+    &__zone-heading {
+        font-size: $font-size-h4;
+        margin-bottom: $unit * 2;
+        padding: $unit;
+        border-bottom: 1px solid $well-border;
+    }
+    &__node {
+        padding: $unit - 1px; // compensate for border
+        margin-bottom: $grid-gutter-width;
+        background-color: $well-bg;
+        border: 1px solid $well-border;
+        &--draggable {
+            cursor: move;
+        }
+        &--dragging {
+            opacity: 0.5;
+        }
+        &--new {
+            background-color: $state-success-bg;
+            border-color: $state-success-border;
+            color: $state-success-text;
+        }
+        &--faulty {
+            background-color: $state-danger-bg;
+            border-color: $state-danger-border;
+            color: $state-danger-text;
+        }
+        &--changed {
+            background-color: $state-info-bg;
+            border-color: $state-info-border;
+            color: $state-info-text;
+        }
+        &--disabled {
+            opacity: 0.5;
+        }
+        &--placeholder {
+            // Placeholder must be the same size as a regular node
+            background-color: transparent;
+            border-color: transparent;
+            font-size: 2em;
+            color: $text-muted;
+            font-weight: $headings-font-weight;
+        }
+    }
+}

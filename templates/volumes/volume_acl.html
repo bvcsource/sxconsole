@@ -1,0 +1,53 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n sizefieldtags staticfiles sxconsole %}
+
+{% block main %}
+    <header class="page-title page-title--with-buttons">
+        <div>
+            {{ volume | icon }}
+            <a href="{{ volume.cluster.get_absolute_url }}">
+                {{ volume.cluster.name }}</a>
+            <span class="fa fa-caret-right"></span>
+            <span class="js-trunc">{{ volume.name }}</span>
+        </div>
+        <div>
+            {% if HAS_LIBRES3 %}
+                {% if volume.is_public %}
+                    <form class="inline-form" action="{% url 'make_volume_private' cluster.pk volume.name %}" method="POST">
+                        {% csrf_token %}
+                        <button class="btn btn-default btn-xs" type="submit">
+                            {% trans "Make private" %}
+                        </button>
+                    </form>
+                {% else %}
+                    <form class="inline-form" action="{% url 'make_volume_public' cluster.pk volume.name %}" method="POST">
+                        {% csrf_token %}
+                        <button class="btn btn-default btn-xs" type="submit">
+                            {% trans "Make public" %}
+                        </button>
+                    </form>
+                {% endif %}
+            {% endif %}
+            <button class="btn btn-default btn-xs" type="button" onClick="history.back()">
+                {% trans "Go back" %}
+            </button>
+        </div>
+    </header>
+
+    <section>
+        <h3>
+            {% trans "Users" %}
+            <a class="btn btn-default" href="{{ add_user_url }}">
+                <span class="fa fa-user-plus"></span>
+                {% trans "New user" %}
+            </a>
+        </h3>
+        <div id="volume-users" data-init="{{ acl_init }}">
+            <span class="text-muted">{% trans "Loading..." %}</span>
+        </div>
+    </section>
+{% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/volumeAcl.js' %}" defer></script>
+{% endblock scripts %}

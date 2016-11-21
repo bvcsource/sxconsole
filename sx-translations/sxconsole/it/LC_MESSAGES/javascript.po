@@ -1,0 +1,411 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"If one node of the cluster dies, the data stored in this volume will become "
+"unavailable. Recommended value: 2 or greater."
+msgstr ""
+
+msgid "{{value}} of {{limit}}"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
+msgid "Volumes"
+msgstr ""
+
+msgid "Allocated space"
+msgstr ""
+
+msgid "Space usage"
+msgstr ""
+
+msgid "Delete volumes?"
+msgstr ""
+
+msgid "Delete selected volumes"
+msgstr ""
+
+msgid "The following volumes have not been deleted:"
+msgstr ""
+
+msgid "The following volumes will be deleted:"
+msgstr ""
+
+msgid "({{done}}/{{all}}) Deleting volumes..."
+msgstr ""
+
+msgid "Failed to delete some volumes."
+msgstr ""
+
+msgid "Selected volumes have been deleted."
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Delete users?"
+msgstr ""
+
+msgid "Delete selected users"
+msgstr ""
+
+msgid "The following users have not been deleted:"
+msgstr ""
+
+msgid "The following users will be deleted:"
+msgstr ""
+
+msgid "({{done}}/{{all}}) Deleting users..."
+msgstr ""
+
+msgid "Failed to delete some users."
+msgstr ""
+
+msgid "Selected users have been deleted."
+msgstr ""
+
+msgid "Login options"
+msgstr ""
+
+msgid "Show login options"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Failed to load login options."
+msgstr ""
+
+msgid "Retry"
+msgstr ""
+
+msgid "Via S3 protocol"
+msgstr ""
+
+msgid "S3 endpoint"
+msgstr ""
+
+msgid "Access key ID"
+msgstr ""
+
+msgid "Secret access key"
+msgstr ""
+
+msgid "Quota"
+msgstr ""
+
+msgid "Submit"
+msgstr ""
+
+msgid "Failed to submit the form."
+msgstr ""
+
+msgid "Loading users..."
+msgstr ""
+
+msgid "Failed to load users."
+msgstr ""
+
+msgid "There are no users yet"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Manage quota"
+msgstr ""
+
+msgid "Reset password"
+msgstr ""
+
+msgid "Cannot delete reserved users."
+msgstr ""
+
+msgid "{{quota}} ({{quotaUsed}} used)"
+msgstr ""
+
+msgid "Loading volumes..."
+msgstr ""
+
+msgid "Failed to load volumes."
+msgstr ""
+
+msgid "There are no volumes yet"
+msgstr ""
+
+msgid "Index"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Usage"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Replicas"
+msgstr ""
+
+msgid "Revs"
+msgstr ""
+
+msgid "This volume is encrypted"
+msgstr ""
+
+msgid "Manage ACL"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Cannot mass-delete non-empty volumes."
+msgstr ""
+
+msgid "Failed to fetch acess logs. Try again later."
+msgstr ""
+
+msgid "Fetching access logs..."
+msgstr ""
+
+msgid "Failed to queue the task."
+msgstr ""
+
+msgid "The following command will be executed:"
+msgstr ""
+
+msgid "Failed to load preview."
+msgstr ""
+
+msgid "Faulty"
+msgstr ""
+
+msgid "Marked as faulty"
+msgstr ""
+
+msgid "Healthy"
+msgstr ""
+
+msgid "Submit changes?"
+msgstr ""
+
+msgid "Submit changes"
+msgstr ""
+
+msgid "Node details"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Node UUID"
+msgstr ""
+
+msgid "Node IP"
+msgstr ""
+
+msgid "Internal IP"
+msgstr ""
+
+msgid "Capacity"
+msgstr ""
+
+msgid "SX version"
+msgstr ""
+
+msgid "Adding a new node"
+msgstr ""
+
+msgid "Add node"
+msgstr ""
+
+msgid "Modifying a node"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Restore"
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+msgid "Online"
+msgstr ""
+
+msgid "Add zone"
+msgstr ""
+
+msgid "Delete zone?"
+msgstr ""
+
+msgid "Zone {{name}} will be deleted."
+msgstr ""
+
+msgid "This zone is empty."
+msgstr ""
+
+msgid "Zone name"
+msgstr ""
+
+msgid "This is not a valid zone name."
+msgstr ""
+
+msgid "This zone already exists."
+msgstr ""
+
+msgid "This zone name is too long."
+msgstr ""
+
+msgid "Rename zone"
+msgstr ""
+
+msgid "Rename"
+msgstr ""
+
+msgid "New node"
+msgstr ""
+
+msgid "Set up node replacement"
+msgstr ""
+
+msgid "Ok"
+msgstr ""
+
+msgid "Undo"
+msgstr ""
+
+msgid "New ip: {{ip}}"
+msgstr ""
+
+msgid "{{operation}} in progress"
+msgstr ""
+
+msgid "There are nodes that need your attention!"
+msgstr ""
+
+msgid "Certain cluster management operations may be unavailable."
+msgstr ""
+
+msgid "This node is faulty and needs to be replaced."
+msgstr ""
+
+msgid "This node is not responding."
+msgstr ""
+
+msgid "(zoneless)"
+msgstr ""
+
+msgid "Node size"
+msgstr ""
+
+msgid "This is not a valid IP address"
+msgstr ""
+
+msgid "Node internal IP"
+msgstr ""
+
+msgid "This is not a valid size"
+msgstr ""
+
+msgid "Cluster name"
+msgstr ""
+
+msgid "Administrator rights"
+msgstr ""
+
+msgid "Remove from admins"
+msgstr ""
+
+msgid "Make administrator"
+msgstr ""
+
+msgid "Stored data"
+msgstr ""
+
+msgid "System load average"
+msgstr ""
+
+msgid "Memory free"
+msgstr ""
+
+msgid "Memory used"
+msgstr ""
+
+msgid "Disk free"
+msgstr ""
+
+msgid "Disk usage"
+msgstr ""
+
+msgid "Incoming traffic"
+msgstr ""
+
+msgid "Outgoing traffic"
+msgstr ""
+
+msgid "Task status"
+msgstr ""
+
+msgid "Task"
+msgstr ""
+
+msgid "(ID: {{id}})"
+msgstr ""
+
+msgid "Added"
+msgstr ""
+
+msgid "Start date"
+msgstr ""
+
+msgid "End date"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Last check: {{when}}"
+msgstr ""
+
+msgid "(optional)"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Permissions"
+msgstr ""
+
+msgid "Read"
+msgstr ""
+
+msgid "The user can read files on the volume"
+msgstr ""
+
+msgid "Write"
+msgstr ""
+
+msgid "The user can modify files on the volume"
+msgstr ""
+
+msgid "Manager"
+msgstr ""
+
+msgid "The user can manage permissions of other users on this volume"
+msgstr ""

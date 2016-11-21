@@ -1,0 +1,36 @@
+{% load i18n sxconsole %}
+
+<header class="page-title">
+    {{ cluster | icon }}
+    <a href="{{ cluster.get_absolute_url }}">
+        {{ cluster.name }}</a>
+    <span class="fa fa-caret-right"></span>
+    <span class="js-trunc">{% trans "Access log" %}</span>
+</header>
+
+<section class="panel panel-default panel-body">
+    <h4>{% trans "Filters" %}</h4>
+    <form class="js-noautofocus js-filter-form" action="{% url 'access_logs_form' cluster.pk %}" method="GET">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-sm-6">
+                {% include 'includes/form_field_vertical.html' with field=form.from_date %}
+            </div>
+            <div class="col-sm-6">
+                {% include 'includes/form_field_vertical.html' with field=form.till_date %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                {% include 'includes/form_field_vertical.html' with field=form.user_filter %}
+            </div>
+            <div class="col-sm-6">
+                {% include 'includes/form_field_vertical.html' with field=form.volume_filter %}
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">
+            <span class="fa fa-search"></span>
+            {% trans "Search" %}
+        </button>
+    </form>
+</section>

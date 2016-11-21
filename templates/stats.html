@@ -1,0 +1,88 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n sizefieldtags staticfiles %}
+
+{% block main %}
+    <header class="page-title">
+        <span class="fa fa-area-chart"></span>
+        <span class="js-trunc">{% trans "Statistics" %}</span>
+    </header>
+
+    <section>
+        <div class="row">
+            <div class="visible-lg-block col-lg-3">
+                <div class="js-stats-controls stats-controls">
+                    <section class="dropdown">
+                        <div class="stats-controls__title">
+                            {% trans "Navigation" %}
+                        </div>
+                        <button class="btn btn-default btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+                            {% trans "Select interval" %}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="js-intervals dropdown-menu dropdown-menu-right">
+                            <li>
+                                <button class="dropdown-item" type="button" data-delta="3">{% trans "3 hours" %}</a>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button" data-delta="24">{% trans "24 hours" %}</a>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button" data-delta="24 7">{% trans "1 week" %}</a>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button" data-delta="24 30">{% trans "1 month" %}</a>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button" data-delta="24 365">{% trans "1 year" %}</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="btn-group btn-group-justified">
+                        <div class="btn-group">
+                            <button class="btn btn-default js-refresh">
+                                <span class="fa fa-fw fa-refresh"></span>
+                                {% trans "Refresh" %}
+                            </button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default js-auto-refresh">
+                                <span class="fa fa-fw fa-play"></span>
+                                <span class="visible-xl-inline">
+                                    {% trans "Auto refresh" %}
+                                </span>
+                                <span class="hidden-xl">
+                                    {% trans "Auto" %}
+                                </span>
+                            </button>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="stats-controls__title">
+                            {% trans "Charts" %}
+                        </div>
+                        <div class="js-stat-list list-group">
+                        </div>
+                    </section>
+
+                    <a class="js-scroll-top" href="#">
+                        <span class="fa fa-arrow-up"></span>
+                        {% trans "Back to top" %}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-9">
+                <div id="stats" class="stats" data-url="{% url 'get_stats' %}">
+                    <span class="text-muted">{% trans "Loading statistics..." %}</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/stats.js' %}" defer></script>
+{% endblock scripts %}

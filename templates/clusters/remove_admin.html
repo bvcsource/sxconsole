@@ -1,0 +1,9 @@
+{% extends 'delete.html' %}
+{% load i18n %}
+
+{% block warning_message %}
+    {% blocktrans trimmed with admin=view.admin cluster=view.object %}
+        You are about to delete <strong>{{ admin }}</strong>
+        from {{ cluster }} administrators.
+    {% endblocktrans %}
+{% endblock warning_message %}

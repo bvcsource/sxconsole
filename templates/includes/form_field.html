@@ -1,0 +1,31 @@
+<div class="form-group {{ field.errors | yesno:'has-error,'}}">
+    {% include 'includes/form_field_label.html' with label_classes='col-sm-4 control-label' %}
+    <div class="col-sm-8">
+        {% if field.is_radio %}
+            {% for choice in field %}
+                <div class="radio">
+                    {{ choice }}
+                </div>
+            {% endfor %}
+        {% elif field.is_checkbox %}
+            <div class="checkbox">
+                <label>
+                    {{ field }}
+                    {{ field.label }}
+                </label>
+            </div>
+        {% else %}
+            {{ field }}
+        {% endif %}
+        {% if field.help_text %}
+            <span class="help-block">{{ field.help_text | linebreaksbr }}</span>
+        {% endif %}
+        {% if field.errors %}
+            <span class="help-block">
+                {% for e in field.errors %}
+                    {{ e }} {% if not forloop.last %}<br>{% endif %}
+                {% endfor %}
+            </span>
+        {% endif %}
+    </div>
+</div>

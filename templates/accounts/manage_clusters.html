@@ -1,0 +1,24 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n staticfiles %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/manageAdminClusters.js' %}" defer></script>
+{% endblock scripts %}
+
+{% block page_header %}
+    <header class="page-title page-title--with-buttons">
+        <div>
+            <span class="fa fa-pencil"></span>
+            <span class="js-trunc">{{ view.title }}</span>
+        </div>
+        <div>
+            <button class="btn btn-default btn-xs" type="button" onClick="history.back()">
+                {% trans "Go back" %}
+            </button>
+        </div>
+    </header>
+{% endblock page_header %}
+
+{% block main %}
+    <div id="manage-clusters" data-clusters="{{ clusters }}"></div>
+{% endblock main %}

@@ -1,0 +1,87 @@
+.page-title {
+    // Keep it the same height as the "add cluster" button
+    padding: 10px 0;
+    margin-bottom: $unit;
+    font-size: $font-size-large;
+    &--with-buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > :not(:last-child) {
+            flex-grow: 1;
+        }
+
+    }
+}
+
+.page-messages {
+    .alert {
+        // Keep it the same height as the "add cluster" button
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: $unit;
+    }
+}
+
+@mixin chart-slice-filled($color) {
+    .recharts-pie-sector path {
+        fill: $color;
+    }
+}
+
+@mixin chart-slice-empty($color) {
+    .recharts-pie-sector + .recharts-pie-sector path {
+        fill: $color;
+    }
+}
+
+.page-stats {
+    display: flex;
+    margin-bottom: $unit;
+    flex-direction: row;
+
+    & > * {
+        padding: $unit;
+        border: 1px solid $well-border;
+        background: $well-bg;
+
+        & + * {
+            margin-left: $unit;
+        }
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        & > * + * {
+            margin-left: $unit;
+        }
+    }
+
+    &__stat-text {
+        min-width: 2em;
+        font-size: $unit * 2;
+        text-align: right;
+    }
+
+    &__chart {
+
+        .recharts-pie-sector path {
+            stroke-width: 0px;
+        }
+
+        @include chart-slice-filled($brand-primary);
+        @include chart-slice-empty($gray-lighter);
+
+        &--warning {
+            @include chart-slice-filled($brand-warning);
+        }
+
+        &--danger {
+            @include chart-slice-filled($brand-danger);
+            @include chart-slice-empty($state-danger-text);
+        }
+    }
+}

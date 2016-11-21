@@ -1,0 +1,14 @@
+pip-tools
+virtualenvwrapper
+supervisor
+flake8<3
+flake8-commas
+flake8-import-order
+ipython
+ipdb
+pytest
+pytest-django
+pytest-cov
+mock
+factory_boy
+model-mommy

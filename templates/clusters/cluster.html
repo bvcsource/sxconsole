@@ -1,0 +1,137 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n sizefieldtags staticfiles sxconsole %}
+
+{% block main %}
+    {% if cluster.expiration %}
+        <div class="page-messages">
+            {% if cluster.is_expired %}
+                <div class="alert alert-danger">
+                    <span class="fa fa-times"></span>
+                    {% blocktrans trimmed with date=cluster.expiration.expiration_date %}
+                        This cluster has expired on {{ date }}
+                    {% endblocktrans %}
+                </div>
+            {% else %}
+                <div class="alert alert-warning">
+                    <span class="fa fa-exclamation-triangle"></span>
+                    {% blocktrans trimmed with date=cluster.expiration.expiration_date %}
+                        This cluster will expire on {{ date }}
+                    {% endblocktrans %}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    <header class="page-title page-title--with-buttons">
+        <div>
+            {{ cluster | icon }}
+            <span class="js-trunc">{{ cluster }}</span>
+        </div>
+        <div>
+            <a class="btn btn-default btn-xs" href="{% url 'access_logs_form' cluster.pk %}">
+                {% trans "Access log" %}
+            </a>
+            {% if not cluster.is_root %}
+                {% if user.is_superadmin %}
+                    <a class="btn btn-default btn-xs" href="{% url 'edit_cluster' cluster.pk %}">
+                        {% trans "Settings" %}
+                    </a>
+                    <a class="btn btn-danger btn-xs" href="{% url 'delete_cluster' cluster.pk %}">
+                        {% trans "Delete" %}
+                    </a>
+                {% endif %}
+            {% endif %}
+        </div>
+    </header>
+
+    <div id="cluster-stats" class="scrollbar-x-container" data-props="{{ stats_data }}"></div>
+
+    <section>
+        <ul id="cluster-tabs" class="nav nav-tabs">
+            <li><a href="#volumes" data-toggle="tab">{% trans "Volumes" %}</a></li>
+            <li><a href="#users" data-toggle="tab">{% trans "Users" %}</a></li>
+            <li><a href="#admins" data-toggle="tab">{% trans "Administrators" %}</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane" id="volumes">
+                <div class="btn-row">
+                    <a class="btn btn-default" href="{% url 'add_volume' cluster.pk %}">
+                        {% trans "Add a volume" %}
+                    </a>
+                    {% if not cluster.is_root %}
+                    <a class="btn btn-default" href="{% url 's3import' cluster.pk %}">
+                        {% trans "Import data" %}
+                    </a>
+                    {% endif %}
+                </div>
+                <div id="cluster-volumes" data-cluster-id="{{ cluster.pk }}"></div>
+            </div>
+
+            <div class="tab-pane" id="users">
+                <div class="btn-row">
+                    <a class="btn btn-default" href="{% url 'add_user' cluster.pk %}">
+                        {% trans "Add a user" %}
+                    </a>
+                </div>
+                <div id="cluster-users" data-cluster-id="{{ cluster.pk }}"></div>
+            </div>
+
+            <div class="tab-pane" id="admins">
+                {% if user.is_superadmin and not cluster.is_root %}
+                    <div class="btn-row">
+                        <a class="btn btn-default" href="{% url 'add_cluster_admin' cluster.pk %}">
+                            {% trans "Add an administrator" %}
+                        </a>
+                    </div>
+                {% endif %}
+                <div class="table-responsive">
+                    <table class="table-common table-hover">
+                        <thead>
+                            <tr>
+                                <th class="col-name">{% trans "E-mail" %}</th>
+                                <th class="col-actions">{% trans "Actions" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for a in cluster_admins %}
+                                <tr>
+                                    <td class="col-name">
+                                        <span class="js-trunc">{{ a }}</span>
+                                    </td>
+                                    <td class="col-actions">
+                                        {% if user.is_superadmin and not a.is_superadmin and not cluster.is_root %}
+                                            <a class="btn btn-default btn-xs" href="{% url 'remove_cluster_admin' cluster.pk a.pk %}">
+                                                {% trans "Remove" %}
+                                            </a>
+                                        {% else %}
+                                            &ndash;
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock main %}
+
+{% block scripts %}
+    <script>
+        {# TODO global urls maybe? #}
+        window._volumeUrls = {
+            acl: '{% url "volume_acl" cluster.pk "__volume__" %}',
+            edit: '{% url "edit_volume" cluster.pk "__volume__" %}',
+            delete: '{% url "delete_volume" cluster.pk "__volume__" %}',
+        };
+        window._userUrls = {
+            resetPassword: '{% url "cluster_user_send_password_reset" cluster.pk "__user__" %}',
+            delete: '{% url "delete_user" cluster.pk "__user__" %}',
+            loginOptions: '{% url "user_login_options" cluster.pk "__user__" %}',
+        };
+        window.showLoginOptions = {{ HAS_LIBRES3 | yesno:'true,false' }};
+    </script>
+    <script src="{% static 'sxconsole/cluster.js' %}" defer></script>
+{% endblock scripts %}

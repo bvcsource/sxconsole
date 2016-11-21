@@ -1,0 +1,99 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "airbnb",
+  "globals": {
+    "__": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "import",
+    "react"
+
+  ],
+  "rules": {
+    "arrow-parens": [
+      1,
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "comma-dangle": [
+      1,
+      "always-multiline"
+    ],
+    "consistent-return": 0,
+    "indent": [
+      1,
+      4
+    ],
+    "jsx-quotes": [
+      1,
+      "prefer-single"
+    ],
+    "max-len": [
+      1,
+      100
+    ],
+    "new-cap": [
+      1,
+      {
+        "capIsNewExceptions": [
+          "DragDropContext",
+          "DragSource",
+          "DropTarget"
+        ]
+      }
+    ],
+    "no-case-declarations": 0,
+    "no-multi-spaces": 1,
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-vars": 1,
+    "no-use-before-define": [
+      2,
+      {
+        "functions": false
+      }
+    ],
+    "quotes": 0,
+    "semi": [
+      1,
+      "never"
+    ],
+    "space-before-function-paren": [
+      1,
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
+    ],
+    "space-infix-ops": 0,
+    "import/named": 2,
+    "react/forbid-prop-types": 0,
+    "react/jsx-indent": [
+      1,
+      4
+    ],
+    "react/jsx-filename-extension": 0,
+    "react/jsx-indent-props": [
+      1,
+      4
+    ],
+    "react/no-children-prop": 0,
+    "react/no-multi-comp": 0,
+    "react/sort-comp": [
+      1,
+      {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "render",
+          "everything-else"
+        ]
+      }
+    ]
+  }
+}

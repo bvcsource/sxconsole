@@ -1,0 +1,50 @@
+{% load i18n staticfiles %}
+
+<header class="row visible-xs">
+    <a class="side-panel__heading" href="{% url 'home' %}">
+        <img class="side-panel__logo" src="{% static 'img/logo.png' %}">
+        <h4>
+            {{ SKIN.console_app_name }}
+        </h4>
+    </a>
+</header>
+
+<header>
+    <nav class="main-nav">
+        <a class="main-nav__item" href="{% url 'home' %}">
+            {% trans "Dashboard" %}
+        </a>
+
+        {% if user.is_superadmin %}
+            <a class="main-nav__item" href="{% url 'stats' %}">
+                {% trans "Stats" %}
+            </a>
+            <a class="main-nav__item" href="{% url 'admin_list' %}">
+                {% trans "Admins" %}
+            </a>
+            {% if not DISABLE_SX_MANAGEMENT %}
+                <a class="main-nav__item" href="{% url 'cluster_management' %}">
+                    {% trans "Cluster Management" %}
+                </a>
+            {% endif %}
+        {% endif %}
+
+        <a class="main-nav__item" href="{% url 'task_list' %}">
+            {% trans "Tasks" %}
+        </a>
+
+        <div class="visible-lg main-nav__space"></div>
+
+        <a class="main-nav__item" class="btn btn-default" href="{% url 'profile' %}">
+            {{ user.email }}
+        </a>
+
+        <form class="inline-form" action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+            <button class="main-nav__item main-nav__item--danger">
+                <span class="fa fa-power-off"></span>
+                {% trans "Logout" %}
+            </button>
+        </form>
+    </nav>
+</header>

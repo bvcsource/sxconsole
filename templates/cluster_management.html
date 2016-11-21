@@ -1,0 +1,73 @@
+{% extends 'simple_form.html' %}
+{% load i18n staticfiles %}
+
+{% block page_header %}
+    <header class="page-title">
+        <span class="fa fa-wrench"></span>
+        <span class="js-trunc">{% trans "Cluster Management" %}</span>
+    </header>
+{% endblock page_header %}
+
+{% block main %}
+    <section id="warnings"></section>
+    <div id="nodes-init" data-init="{{ nodes_init }}"></div>
+        <ul id="cluster-management-tabs" class="nav nav-tabs">
+            <li class="active">
+                <a href="#cluster" data-toggle="tab">
+                    {% trans "Cluster configuration" %}
+                </a>
+            </li>
+            <li>
+                <a href="#nodes" data-toggle="tab">
+                    {% trans "Node management" %}
+                </a>
+            </li>
+            <li>
+                <a href="#mark-faulty" data-toggle="tab">
+                    {% trans "Mark as faulty" %}
+                </a>
+            </li>
+            <li>
+                <a href="#replace-faulty" data-toggle="tab">
+                    {% trans "Replace faulty nodes" %}
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="cluster" class="tab-pane active">
+                {% block form %}
+                    {% include 'includes/form.html' %}
+                {% endblock form %}
+            </div>
+
+            <div id="nodes" class="tab-pane">
+                <span class="lead text-muted">
+                    {% trans "Loading..." %}
+                </span>
+            </div>
+
+            <div id="mark-faulty" class="tab-pane">
+                <span class="lead text-muted">
+                    {% trans "Loading..." %}
+                </span>
+            </div>
+
+            <div id="replace-faulty" class="tab-pane">
+                <span class="lead text-muted">
+                    {% trans "Loading..." %}
+                </span>
+            </div>
+        </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        window._sxadmUrls = {
+            modifyCluster: '{% url "sxadm_modify_cluster" %}',
+            markNodesAsFaulty: '{% url "sxadm_mark_as_faulty" %}',
+            replaceFaultyNodes: '{% url "sxadm_replace_faulty" %}',
+        };
+    </script>
+    <script src="{% static 'sxconsole/clusterManagement.js' %}" defer></script>
+{% endblock scripts %}

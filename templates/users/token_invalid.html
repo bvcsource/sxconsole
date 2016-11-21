@@ -1,0 +1,14 @@
+{% extends 'message_base.html' %}
+{% load i18n %}
+
+{% block main %}
+    <div class="alert alert-danger">
+        <h3>{% trans "Invalid token" %}</h3>
+        <p>
+            {% blocktrans trimmed with app_name=SKIN.app_name %}
+                You can't set your password because this token expired, or has
+                been already used up.
+            {% endblocktrans %}
+        </p>
+    </div>
+{% endblock main %}

@@ -1,0 +1,16 @@
+{% extends 'volumes/volume_form.html' %}
+{% load i18n sxconsole %}
+
+{% block page_header %}
+    <header class="page-title">
+        {{ volume | icon }}
+        <a href="{{ volume.cluster.get_absolute_url }}">
+            {{ volume.cluster.name }}</a>
+        <span class="fa fa-caret-right"></span>
+        <span class="js-trunc">
+            {% blocktrans trimmed with volume_name=volume.name %}
+                {{ volume_name }} settings
+            {% endblocktrans %}
+        </span>
+    </header>
+{% endblock page_header %}

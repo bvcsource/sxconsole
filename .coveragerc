@@ -1,0 +1,12 @@
+[run]
+source = sxconsole/
+omit =
+    tests/*,
+    sxconsole/*/migrations/*,
+    /*/.virtualenvs/*,
+
+[report]
+skip_covered = true
+exclude_lines =
+    pass
+    pragma: no cover

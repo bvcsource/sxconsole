@@ -1,0 +1,64 @@
+{% load i18n staticfiles sizefieldtags sxconsole %}
+<section class="col-sm-4 col-lg-2 side-panel js-side-panel">
+    <header class="hidden-xs">
+        <a class="side-panel__heading" href="{% url 'home' %}">
+            <img class="side-panel__logo" src="{% static 'img/logo.png' %}">
+            <h4>
+                {{ SKIN.short_console_app_name | default:SKIN.console_app_name }}
+            </h4>
+        </a>
+    </header>
+    <section class="side-panel__body">
+
+        {% if user.is_superadmin %}
+            <a class="row side-panel__link font-large" href="{% url 'add_cluster' %}">
+                <span class="fa fa-plus"></span>
+                {% trans "Add cluster" %}
+            </a>
+        {% endif %}
+
+        {% if current_cluster %}
+            <a class="row side-panel__link" href="{{ cluster.get_absolute_url }}">
+                <div class="font-large">
+                    {{ cluster | icon }}&nbsp;
+                    <span class="js-trunc">{{ current_cluster }}</span>
+                </div>
+                <div>
+                    {% blocktrans trimmed with cluster_usage=current_cluster.get_used_size_display %}
+                        {{ cluster_usage }} used
+                    {% endblocktrans %}
+                </div>
+            </a>
+        {% endif %}
+
+        <div class="bold">
+            {% blocktrans trimmed with count=side_panel.clusters_count %}
+                List of clusters ({{count}})
+            {% endblocktrans %}
+        </div>
+
+        {% if side_panel.clusters %}
+            <div class="row cluster-list js-cluster-list">
+                {% for cluster in side_panel.clusters %}
+                    <a class="side-panel__link
+                            {% if current_cluster and current_cluster == cluster %}
+                                side-panel__link--active
+                            {% endif %}"
+                            href="{{ cluster.get_absolute_url }}">
+                        {{ cluster | icon:'fa-lg' }}&nbsp;
+                        <span class="js-trunc">{{ cluster }}</span>
+                    </a>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="cluster-list--empty js-cluster-list">
+                <span class="text-muted font-large">
+                    {% trans "There are no clusters yet" %}
+                </span>
+            </div>
+        {% endif %}
+        <div class="js-app-version app-version">
+            {{ SKIN.console_app_name }} {{ VERSION }}
+        </div>
+    </section>
+</section>

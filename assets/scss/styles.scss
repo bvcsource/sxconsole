@@ -1,0 +1,242 @@
+// global setup & libraries
+
+@import 'variables';
+@import 'bootstrap';
+@import 'bootstrap_overrides';
+@import 'utils';
+@import 'page';
+@import 'modals';
+@import 'perfect_scrollbar';
+@import '~font-awesome/scss/font-awesome';
+
+@import '~c3/src/scss/main.scss';
+.c3 svg {
+    font-size: 13px;
+}
+.c3-legend-item {
+    font-size: $font-size-base;
+}
+@import '~bootstrap-datepicker/dist/css/bootstrap-datepicker3.css';
+
+
+// own components
+
+$header-height: 71px;
+@import 'side_panel';
+@import 'main_header';
+@import 'cluster_management';
+
+
+// mess
+
+.form-control[type="range"] {
+    border: none;
+    padding: 0; // Let the slider go all the way to the left/right
+    &, &:focus {
+        // Chrome hides the slider track when box-shadow is applied
+        box-shadow: none;
+    }
+}
+
+pre {
+    // Fix line wrapping on firefox
+    white-space: normal;
+}
+
+.alert-error {
+    @extend .alert-danger;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btn-group-justified {
+    // Collapse borders in <button> .btn-groups
+    .btn-group  + .btn-group {
+        button.btn {
+            border-left: 0
+        }
+    }
+}
+
+.btn-row {
+    * {
+        vertical-align: inherit; // Align inline elements with buttons
+    }
+    .btn {
+        margin-bottom: $paragraph-margin;
+    }
+}
+
+.btn-link {
+    color: $link-color;
+    &:disabled {
+        color: $text-muted;
+    }
+    background: transparent;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    vertical-align: initial;
+}
+
+.img-inline {
+    height: 1em;
+    width: auto;
+}
+
+form.inline-form {
+    display: inline-block;
+}
+.label-tip {
+    font-weight: normal;
+    color: $text-muted;
+    .has-error & {
+        color: inherit;
+    }
+}
+
+.tab-pane {
+    margin-top: $unit;
+}
+
+.panel-body, .well, .alert {
+    & > :last-child,
+    & > .table-responsive:last-child > table {
+        // Remove bottom margin on last item in boxes
+        margin-bottom: 0;
+    }
+    // TODO unify header usage
+    & > h4,
+    & > h3 {
+        // Remove top margin on heading in boxes
+        margin-top: 0
+    }
+}
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table-common {
+    @extend .table, .table-striped;
+    th, td {
+        &.col-name {
+            // Item name
+            min-width: 150px;
+            max-width: 250px;
+        }
+        &.col-actions {
+            // Buttons
+            text-align: right;
+            white-space: nowrap;
+        }
+        &.col-select {
+            // Checkbox
+            text-align: right;
+            width: 1px;
+        }
+    }
+}
+
+// Always show scrollbar - useful when you have several tabs opened
+html {
+    overflow-y: scroll;
+}
+
+.main-wrapper {
+    float: none;
+    margin: 0 auto $unit;
+}
+
+.stats {
+    &__chart {
+        & + & {
+            margin-top: 4 * $unit;
+        }
+    }
+    &__header {
+        margin: 0;
+        padding-top: $unit;
+        text-align: center;
+    }
+}
+
+.stats-controls {
+    section + section {
+        margin-top: $unit;
+    }
+    &__title {
+        @extend .small;
+        color: $text-muted;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.error-page {
+    font-size: 2em;
+    text-align: center;
+    img {
+        max-width: 100%;
+    }
+}
+
+
+.node-info {
+    &__heading {
+        margin: 0;
+        a:hover, a:focus {
+            text-decoration: none;
+        }
+    }
+    &__body > .row {
+        // I decided to add margin on a container inside the body and not the
+        // body itself, so that the collapse animation would be smooth.
+        margin-top: $unit;
+    }
+}
+
+
+.logs-table {
+    white-space: nowrap;
+    &__path {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 300px;
+    }
+}
+
+.dropdown-menu > li {
+    // Backport of bootstrap 4's dropdown-item class
+    .dropdown-item {
+        // Apply styles that were available for <a> tags only
+        @extend a;
+        &.disabled, &[disabled] {
+            cursor: not-allowed;
+            background: none;
+            color: $text-muted;
+        }
+    }
+    button {
+        border: 0;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+.pagination-nav {
+    text-align: center;
+    margin-bottom: $unit;
+    & > .pagination {
+        margin: 0;
+    }
+}
+
+.app-version {
+    color: $gray-light;
+    font-size: $font-size-small;
+}

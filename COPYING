@@ -1,0 +1,154 @@
+Skylable SXConsole
+--------------
+
+Copyright (C) 2015-2016 Skylable Ltd. <info-copyright@skylable.com>
+
+This software contains multiple components, some of which are covered by
+different licenses. By using Skylable SXConsole you agree to be bound by the
+conditions of the license for each respective component.
+
+Skylable SXConsole
+------------------
+
+Skylable SXConsole source code is distributed under the Gnu General Public
+License Version 2.0 or later (see LICENSE file).
+
+Other components
+----------------
+
+The following components or their parts are used in this software:
+
+Django
+------
+
+See https://github.com/django/django for license information.
+
+django-sizefield
+----------------
+
+See https://github.com/leplatrem/django-sizefield/blob/master/LICENSE for
+license information.
+
+django-annoying
+---------------
+
+See https://github.com/skorokithakis/django-annoying/blob/master/LICENSE.txt
+for license information.
+
+django-celery
+-------------
+
+See https://github.com/celery/django-celery/blob/master/LICENSE for license
+information.
+
+django-rest-framework
+---------------------
+
+See https://github.com/tomchristie/django-rest-framework/blob/master/LICENSE.md
+for license information.
+
+django-rest-framework-jwt
+-------------------------
+
+See https://github.com/GetBlimp/django-rest-framework-jwt/blob/master/LICENSE
+for license information.
+
+drf-nested-routers
+------------------
+
+See https://github.com/alanjds/drf-nested-routers/blob/master/LICENSE for
+license information.
+
+django-rest-swagger
+-------------------
+
+See https://github.com/marcgibbons/django-rest-swagger/blob/master/LICENSE for
+license information.
+
+django-tz-detect
+----------------
+
+See https://github.com/adamcharnock/django-tz-detect/blob/develop/LICENSE for
+license information.
+
+django-choices
+--------------
+
+See https://github.com/bigjason/django-choices/blob/master/LICENSE for license
+information.
+
+Django Extensions
+-----------------
+
+See https://github.com/django-extensions/django-extensions/blob/master/LICENSE
+for license information.
+
+sxclient
+--------
+
+Copyright (C) 2015-2016 Skylable Ltd. <info-copyright@skylable.com>
+License: Apache 2.0
+
+PyYAML
+------
+
+See https://github.com/yaml/pyyaml/blob/master/LICENSE for license information.
+
+Whisper
+-------
+
+See https://github.com/graphite-project/whisper/blob/master/LICENSE for license
+information.
+
+python-dateutil
+---------------
+
+See https://github.com/paxan/python-dateutil/blob/patches-for-1.5/LICENSE for
+license information.
+
+s3import
+--------
+
+Copyright (C) 2015 Skylable Ltd. <info-copyright@skylable.com>
+License: Apache 2.0
+
+enum34
+------
+
+See https://github.com/certik/enum34/blob/master/enum/LICENSE for license
+information.
+
+unicode-slugify
+---------------
+
+See https://github.com/mozilla/unicode-slugify/blob/master/LICENSE for license
+information.
+
+Unidecode
+---------
+
+See the COPYRIGHT section under
+https://github.com/iki/unidecode/blob/master/README for license information.
+
+boto
+----
+
+See https://github.com/boto/boto/blob/develop/LICENSE for license information.
+
+futures
+-------
+
+See https://github.com/agronholm/pythonfutures/blob/master/LICENSE for license
+information.
+
+redis
+-----
+
+See https://github.com/andymccurdy/redis-py/blob/master/LICENSE for license
+information.
+
+Bootstrap
+---------
+
+See https://github.com/twbs/bootstrap/blob/master/LICENSE for license
+information.

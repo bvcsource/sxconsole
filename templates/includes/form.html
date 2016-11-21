@@ -1,0 +1,31 @@
+{% load i18n %}
+
+<form action="{{ request.get_full_path }}" method="POST">
+    {% include 'includes/non_field_errors.html' %}
+
+    {% csrf_token %}
+    {% if form.fieldsets %}
+        {% for name, fields in form.fieldsets %}
+            <fieldset>
+                {% if name %}
+                    <header class="page-title">
+                        {{ name }}
+                    </header>
+                {% endif %}
+                {% for field in fields %}
+                    {% include 'includes/form_field_vertical.html' %}
+                {% endfor %}
+            </fieldset>
+        {% endfor %}
+    {% else %}
+        {% for field in form %}
+            {% include 'includes/form_field_vertical.html' %}
+        {% endfor %}
+    {% endif %}
+
+    {% if buttons_tpl %}
+        {% include buttons_tpl %}
+    {% else %}
+        {% include 'includes/form_buttons.html' %}
+    {% endif %}
+</form>

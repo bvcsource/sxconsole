@@ -1,0 +1,24 @@
+{% extends 'simple_form.html' %}
+{% load i18n staticfiles %}
+
+{% block main %}
+    <form class="js-form" action="{{ request.get_full_path }}" method="POST">
+        {% include 'includes/non_field_errors.html' %}
+
+        {% csrf_token %}
+        {% for field in form %}
+            {% if field.name == 'size' %}
+                {% include 'includes/size_field.html' %}
+            {% else %}
+                {% include 'includes/form_field_vertical.html' %}
+            {% endif %}
+        {% endfor %}
+
+        {% include 'includes/form_buttons.html' %}
+    </form>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'sxconsole/clusterForm.js' %}" defer></script>
+{% endblock scripts %}

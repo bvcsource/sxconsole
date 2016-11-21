@@ -1,0 +1,7 @@
+{% extends 'volumes/volume_form.html' %}
+{% load staticfiles %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'sxconsole/addVolume.js' %}" defer></script>
+{% endblock scripts %}

@@ -1,0 +1,28 @@
+{% extends 'simple_form.html' %}
+{% load i18n staticfiles %}
+
+{% block main %}
+    <form class="js-form" action="{{ request.get_full_path }}" method="POST">
+        {% include 'includes/non_field_errors.html' %}
+
+        {% csrf_token %}
+        {% include 'includes/form_field_vertical.html' with field=form.email %}
+        {% include 'includes/form_field_vertical.html' with field=form.option %}
+
+        <div class="js-form-invite hidden">
+            {% include 'includes/form_field_vertical.html' with field=form.message %}
+            {% include 'includes/form_field_vertical.html' with field=form.save %}
+        </div>
+
+        <div class="js-form-password hidden">
+            {% include 'includes/form_field_vertical.html' with field=form.password %}
+            {% include 'includes/form_field_vertical.html' with field=form.confirm_password %}
+        </div>
+
+        {% include 'includes/form_buttons.html' %}
+    </form>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/userForm.js' %}" defer></script>
+{% endblock scripts %}

@@ -1,0 +1,27 @@
+{% load i18n %}
+{% trans "Task" %} {{uuid}} {% trans "finished at:" %} {{ time }}
+
+{% trans "Source S3 service:" %} {{ source }}
+{% trans "Destination SX cluster:" %} {{ destination }}
+{% trans "Destination virtual cluster:" %} {{ vcluster }}
+
+{% autoescape off %}
+{% if reason %}
+{% trans "Reason of failure:" %} {{ reason }}
+{% endif %}
+{% endautoescape %}
+
+{% if imported %}
+{% trans "Imported buckets:" %}
+{% for bucket, volume, data_size, volume_created in imported %} - {{ bucket }} {% trans "as" %} {{ volume }}{% if not volume_created %} - {% trans "an existing volume was used" %}{% endif %} ({% trans "size of imported data:" %} {{ data_size|filesizeformat }})
+{% endfor %}
+
+{% else %}
+{% trans "No buckets have been imported." %}
+{% endif %}
+
+{% if skipped %}
+{% trans "Skipped buckets:" %}
+{% for bucket in skipped %} - {{ bucket }}
+{% endfor %}
+{% endif %}

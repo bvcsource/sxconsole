@@ -1,0 +1,12 @@
+.label {
+    border-radius: 0;
+}
+
+.nav-tabs > li {
+    & > a {
+        margin-right: -1px; // Compensate for border
+    }
+    &.active > a {
+        z-index: 1; // Put active tab in front of other tabs
+    }
+}

@@ -1,0 +1,35 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n %}
+
+{% block main %}
+    <form class="form-horizontal panel panel-danger" action="{{ request.get_full_path }}" method="POST">
+        {% csrf_token %}
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                {% trans "Heads up!" %}
+            </h4>
+        </div>
+        <div class="panel-body">
+            <p>
+                {% block warning_message %}
+                    {% blocktrans trimmed %}
+                        You are about to delete <strong>{{ object }}</strong>.
+                    {% endblocktrans %}
+                {% endblock warning_message %}
+                {% trans "Do you wish to continue?" %}
+            </p>
+
+            {% block extra_section %}
+            {% endblock %}
+
+            <div>
+                <button class="btn btn-default" type="button" onClick="history.back()">
+                    {% trans "Go back" %}
+                </button>
+                <button class="btn btn-danger" type="submit">
+                    {% trans "Delete" %}
+                </button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

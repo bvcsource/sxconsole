@@ -1,0 +1,1386 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-12 08:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: sxconsole/accounts/forms.py:21
+msgid ""
+"Please enter a correct email and password. Note that both fields may be case-"
+"sensitive."
+msgstr ""
+
+#: sxconsole/accounts/forms.py:24
+msgid "Remember me"
+msgstr ""
+
+#: sxconsole/accounts/forms.py:50
+msgid "There is no user with this e-mail address."
+msgstr ""
+
+#: sxconsole/accounts/forms.py:77
+msgid "Current password"
+msgstr ""
+
+#: sxconsole/accounts/forms.py:86
+msgid "New password"
+msgstr ""
+
+#: sxconsole/accounts/forms.py:91
+msgid "Please enter your password."
+msgstr ""
+
+#: sxconsole/accounts/models.py:24
+msgid "Admin"
+msgstr ""
+
+#: sxconsole/accounts/models.py:25
+msgid "Super Admin"
+msgstr ""
+
+#: sxconsole/accounts/models.py:26
+msgid "Root Admin"
+msgstr ""
+
+#: sxconsole/accounts/models.py:34 sxconsole/utils/forms.py:33
+msgid "Email"
+msgstr ""
+
+#: sxconsole/accounts/models.py:35 templates/accounts/admin_list.html:23
+msgid "Level"
+msgstr ""
+
+#: sxconsole/accounts/models.py:80 sxconsole/users/models.py:41
+msgid "{app_name} password reset"
+msgstr ""
+
+#: sxconsole/accounts/models.py:93 sxconsole/users/models.py:51
+msgid "Welcome to {app_name}!"
+msgstr ""
+
+#: sxconsole/accounts/views.py:37 templates/accounts/login_buttons.html:5
+msgid "Login"
+msgstr ""
+
+#: sxconsole/accounts/views.py:63
+msgid "Profile"
+msgstr ""
+
+#: sxconsole/accounts/views.py:70 templates/accounts/profile.html:16
+msgid "Change password"
+msgstr ""
+
+#: sxconsole/accounts/views.py:105 sxconsole/users/views.py:170
+msgid "Welcome"
+msgstr ""
+
+#: sxconsole/accounts/views.py:110 sxconsole/users/views.py:175
+msgid ""
+"Welcome to {app_name}! First, you have to set a password for your account."
+msgstr ""
+
+#: sxconsole/accounts/views.py:117 sxconsole/users/views.py:182
+msgid "Password reset"
+msgstr ""
+
+#: sxconsole/accounts/views.py:118 sxconsole/users/views.py:183
+msgid "Enter a new password."
+msgstr ""
+
+#: sxconsole/accounts/views.py:127
+msgid "Forgot your password?"
+msgstr ""
+
+#: sxconsole/accounts/views.py:128
+msgid ""
+"Enter your e-mail address. We'll send you a link to recover your account."
+msgstr ""
+
+#: sxconsole/accounts/views.py:136
+msgid ""
+"We have sent you an e-mail with instructions on resetting your password."
+msgstr ""
+
+#: sxconsole/accounts/views.py:156 templates/accounts/admin_list.html:8
+#: templates/clusters/cluster.html:52
+msgid "Administrators"
+msgstr ""
+
+#: sxconsole/accounts/views.py:166
+msgid "Invite"
+msgstr ""
+
+#: sxconsole/accounts/views.py:178 sxconsole/clusters/views.py:72
+#: sxconsole/clusters/views.py:200 sxconsole/users/views.py:93
+msgid "Invitation has been sent to {}"
+msgstr ""
+
+#: sxconsole/accounts/views.py:194
+msgid "Deleting {email}"
+msgstr ""
+
+#: sxconsole/accounts/views.py:211
+msgid "Managing {email} clusters"
+msgstr ""
+
+#: sxconsole/api/serializers/fields.py:50 sxconsole/clusters/forms.py:59
+msgid "You can't set a date in the past."
+msgstr ""
+
+#: sxconsole/api/serializers/users.py:21
+msgid "If omitted, a random password will be assigned."
+msgstr ""
+
+#: sxconsole/clusters/forms.py:31 sxconsole/clusters/models.py:280
+msgid "Expiration date"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:33
+msgid "Optional. If set, the cluster will become unusable on this date."
+msgstr ""
+
+#: sxconsole/clusters/forms.py:86
+msgid "Cluster admin"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:87
+msgid "E-mail address of the cluster's admin."
+msgstr ""
+
+#: sxconsole/clusters/forms.py:94
+msgid "From"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:95
+msgid "Until"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:96 templates/clusters/logs/results.html:12
+msgid "User"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:97
+msgid "Volume"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:101
+msgid "S3 host"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:103
+msgid "S3 port"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:105
+msgid "Custom port number used to connect to the S3 host. Default is 443."
+msgstr ""
+
+#: sxconsole/clusters/forms.py:107
+msgid "S3 access key ID"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:108
+msgid "S3 secret access key"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:110
+msgid "Default new volume size"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:113
+msgid ""
+"If destination volume for any given bucket doesn't exist, it will be created "
+"with the size given here. If no value is given, the size will be slightly "
+"larger than the size of the bucket. Suffixes can be used, e.g. 100GB."
+msgstr ""
+
+#: sxconsole/clusters/forms.py:118
+msgid "Default new volume replicas"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:120
+msgid ""
+"If destination volume for any given bucket doesn't exist, it will be created "
+"with the replica count given here."
+msgstr ""
+
+#: sxconsole/clusters/forms.py:123
+msgid "Validate S3 SSL certificates"
+msgstr ""
+
+#: sxconsole/clusters/forms.py:125
+msgid "Advanced"
+msgstr ""
+
+#: sxconsole/clusters/models.py:54
+msgid "Cluster name"
+msgstr ""
+
+#: sxconsole/clusters/models.py:58
+msgid "Max volumes"
+msgstr ""
+
+#: sxconsole/clusters/models.py:62
+msgid "Max users"
+msgstr ""
+
+#: sxconsole/clusters/models.py:66 sxconsole/volumes/forms.py:21
+msgid "Size"
+msgstr ""
+
+#: sxconsole/clusters/models.py:70
+msgid "Enable thin provisioning"
+msgstr ""
+
+#: sxconsole/clusters/models.py:73 sxconsole/volumes/forms.py:25
+msgid "Replicas"
+msgstr ""
+
+#: sxconsole/clusters/models.py:74
+msgid ""
+"Optional. If set, all new volumes in this cluster will use this replica "
+"count."
+msgstr ""
+
+#: sxconsole/clusters/models.py:139 sxconsole/clusters/models.py:150
+msgid "{usage} of {size} ({percentage}%)"
+msgstr ""
+
+#: sxconsole/clusters/models.py:278
+msgid "Cluster"
+msgstr ""
+
+#: sxconsole/clusters/models.py:340
+msgid "List"
+msgstr ""
+
+#: sxconsole/clusters/models.py:341
+msgid "Download"
+msgstr ""
+
+#: sxconsole/clusters/models.py:342
+msgid "Upload"
+msgstr ""
+
+#: sxconsole/clusters/models.py:343 templates/accounts/admin_list.html:41
+#: templates/clusters/cluster.html:39 templates/delete.html:30
+msgid "Delete"
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:94
+msgid "S3 import {state_verb}"
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:96
+msgid "succeeded"
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:98
+msgid "partially failed!"
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:100
+msgid "failed!"
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:141
+msgid "Replica count is not set. Buckets will not be imported."
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:181
+msgid ""
+"Bucket '{}' will not be imported because its destination volume name '{}' "
+"has already been used."
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:197
+msgid "Nothing to import for bucket '{}'"
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:242
+msgid ""
+"Volumes for imported buckets cannot be created because the max volumes limit "
+"would be exceeded. Buckets will not be imported."
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:246
+msgid "Buckets will not be imported because the cluster has expired."
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:264
+msgid ""
+"Volume '{}' cannot be created because there is not enough unallocated space "
+"on the cluster. Bucket will not be imported."
+msgstr ""
+
+#: sxconsole/clusters/tasks/s3import.py:269
+msgid ""
+"Volumes for imported buckets cannot be created because there is not enough "
+"unallocated space on the cluster. Buckets will not be imported."
+msgstr ""
+
+#: sxconsole/clusters/views.py:39
+msgid "Adding a new cluster"
+msgstr ""
+
+#: sxconsole/clusters/views.py:131 sxconsole/volumes/views.py:94
+msgid "Updating {}"
+msgstr ""
+
+#: sxconsole/clusters/views.py:175
+msgid "To delete a cluster, delete its users and volumes first."
+msgstr ""
+
+#: sxconsole/clusters/views.py:180 sxconsole/users/views.py:105
+#: sxconsole/volumes/views.py:148
+msgid "Deleting {}"
+msgstr ""
+
+#: sxconsole/clusters/views.py:193
+msgid "New admin for {}"
+msgstr ""
+
+#: sxconsole/clusters/views.py:202
+msgid "User {} cannot be added"
+msgstr ""
+
+#: sxconsole/clusters/views.py:219
+msgid "Removing admin {} from {}"
+msgstr ""
+
+#: sxconsole/clusters/views.py:318
+msgid "Import data from an S3 service"
+msgstr ""
+
+#: sxconsole/clusters/views.py:361
+msgid "S3 import task status"
+msgstr ""
+
+#: sxconsole/core.py:169
+msgid ""
+"Name should consist of at least two characters and include only alphanumeric "
+"characters, hyphen and underscore."
+msgstr ""
+
+#: sxconsole/core.py:180
+msgid "Size must be at least 1MB."
+msgstr ""
+
+#: sxconsole/core.py:187
+msgid "Replicas must be between {min} and {max}."
+msgstr ""
+
+#: sxconsole/core.py:206
+msgid "Revisions must be between {min} and {max}."
+msgstr ""
+
+#: sxconsole/core.py:214
+msgid "Port number must be between {min} and {max}."
+msgstr ""
+
+#: sxconsole/core.py:275
+msgid ""
+"An error occurred while processing your request. Please try again later."
+msgstr ""
+
+#: sxconsole/core.py:285
+msgid "Connection to the cluster failed."
+msgstr ""
+
+#: sxconsole/core.py:291
+msgid "Volume size should be between {min} and {max}."
+msgstr ""
+
+#: sxconsole/core.py:294
+msgid "Can't create a new volume: cluster capacity has been reached."
+msgstr ""
+
+#: sxconsole/core.py:298
+msgid "Failed to update cluster metadata."
+msgstr ""
+
+#: sxconsole/core.py:304
+msgid "Cluster size should be at least {min}."
+msgstr ""
+
+#: sxconsole/entities.py:35
+msgid "No"
+msgstr ""
+
+#: sxconsole/entities.py:36
+msgid "Yes"
+msgstr ""
+
+#: sxconsole/entities.py:37
+msgid "Full-text"
+msgstr ""
+
+#: sxconsole/models.py:21
+msgid "Remove node"
+msgstr ""
+
+#: sxconsole/models.py:22
+msgid "Mark node as faulty"
+msgstr ""
+
+#: sxconsole/models.py:23
+msgid "Replace faulty node"
+msgstr ""
+
+#: sxconsole/models.py:24
+msgid "Add node"
+msgstr ""
+
+#: sxconsole/models.py:25
+msgid "Modify node"
+msgstr ""
+
+#: sxconsole/models.py:26
+msgid "Update zones"
+msgstr ""
+
+#: sxconsole/models.py:27
+msgid "Resize cluster"
+msgstr ""
+
+#: sxconsole/models.py:29
+msgid "Modify cluster configuration"
+msgstr ""
+
+#: sxconsole/models.py:30
+msgid "Mark nodes as faulty"
+msgstr ""
+
+#: sxconsole/models.py:31 templates/cluster_management.html:32
+msgid "Replace faulty nodes"
+msgstr ""
+
+#: sxconsole/models.py:33
+msgid "Import data from S3"
+msgstr ""
+
+#: sxconsole/models.py:34
+msgid "Delete volume"
+msgstr ""
+
+#: sxconsole/models.py:35
+msgid "Prepare access logs"
+msgstr ""
+
+#: sxconsole/msgs.py:8
+msgid "An error occurred while sending e-mail. Please try again later."
+msgstr ""
+
+#: sxconsole/msgs.py:13
+msgid "Your cluster"
+msgstr ""
+
+#: sxconsole/msgs.py:14
+msgid "SX Enterprise only"
+msgstr ""
+
+#: sxconsole/msgs.py:15
+msgid "Upgrade now!"
+msgstr ""
+
+#: sxconsole/msgs.py:16
+msgid "Upgrade to SX Enterprise to enable more graphs."
+msgstr ""
+
+#: sxconsole/msgs.py:17
+msgid "With SX Enterprise, you can manage multiple virtual clusters."
+msgstr ""
+
+#: sxconsole/settings/django.py:123
+msgid "English"
+msgstr ""
+
+#: sxconsole/settings/django.py:124
+msgid "German"
+msgstr ""
+
+#: sxconsole/settings/django.py:125
+msgid "Italian"
+msgstr ""
+
+#: sxconsole/settings/django.py:126
+msgid "Polish"
+msgstr ""
+
+#: sxconsole/sx_management/cluster_operations.py:65
+msgid "Cluster resize has been scheduled."
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:15
+msgid "SXWeb address"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:16
+msgid "SXShare address"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:18
+msgid "LibreS3 address"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:21
+msgid "Cluster size"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:25
+msgid "Keepalive"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:26
+msgid "Warn time"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:27
+msgid "Dead time"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:28
+msgid "Init dead"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:32
+msgid "SX Enterprise configuration"
+msgstr ""
+
+#: sxconsole/sx_management/forms.py:34
+msgid "Raft settings"
+msgstr ""
+
+#: sxconsole/sx_management/views.py:29 templates/cluster_management.html:7
+#: templates/header.html:27
+msgid "Cluster Management"
+msgstr ""
+
+#: sxconsole/users/forms.py:19
+msgid "Message"
+msgstr ""
+
+#: sxconsole/users/forms.py:27
+msgid "Save as default message"
+msgstr ""
+
+#: sxconsole/users/forms.py:41
+msgid ""
+"Please keep the \"{{link}}\" tag in the message. This is where the "
+"invitation link will be placed."
+msgstr ""
+
+#: sxconsole/users/forms.py:51
+msgid "Send an invitation e-mail"
+msgstr ""
+
+#: sxconsole/users/forms.py:52
+msgid "Set the user's password"
+msgstr ""
+
+#: sxconsole/users/forms.py:59 sxconsole/utils/forms.py:48
+msgid "Password"
+msgstr ""
+
+#: sxconsole/users/forms.py:60 sxconsole/utils/forms.py:49
+msgid "Confirm password"
+msgstr ""
+
+#: sxconsole/users/validators.py:13
+msgid "User with this e-mail address already exists in this cluster."
+msgstr ""
+
+#: sxconsole/users/views.py:38
+msgid "Adding a new user"
+msgstr ""
+
+#: sxconsole/users/views.py:74
+msgid "This user already exists and has been added to this cluster."
+msgstr ""
+
+#: sxconsole/users/views.py:119
+msgid "Sending password reset"
+msgstr ""
+
+#: sxconsole/users/views.py:124
+msgid "You can't reset this user's password because its cluster has expired."
+msgstr ""
+
+#: sxconsole/users/views.py:129
+msgid "You can't reset this user's password."
+msgstr ""
+
+#: sxconsole/users/views.py:134
+msgid "E-mail with password reset will be sent to {email}."
+msgstr ""
+
+#: sxconsole/users/views.py:144
+msgid "Password reset sent to {}"
+msgstr ""
+
+#: sxconsole/utils/clusters.py:49
+msgid "You can't add a new user because you have reached the max users limit."
+msgstr ""
+
+#: sxconsole/utils/clusters.py:53
+msgid "You can't add a new user because this cluster has expired."
+msgstr ""
+
+#: sxconsole/utils/decorators.py:36
+msgid "You can't do this while logged in."
+msgstr ""
+
+#: sxconsole/utils/forms.py:58
+msgid "Both passwords must match."
+msgstr ""
+
+#: sxconsole/utils/views.py:43
+msgid ""
+"You can't use this link because it expired, or has been already used up."
+msgstr ""
+
+#: sxconsole/utils/views.py:61
+msgid "Your password has been changed successfully."
+msgstr ""
+
+#: sxconsole/views.py:38 sxconsole/views.py:55 templates/admin_home.html:7
+#: templates/header.html:15 templates/superadmin_home.html:7
+msgid "Dashboard"
+msgstr ""
+
+#: sxconsole/views.py:129 templates/stats.html:7
+msgid "Statistics"
+msgstr ""
+
+#: sxconsole/views.py:164
+msgid "Recent tasks"
+msgstr ""
+
+#: sxconsole/views.py:170
+msgid "Task status"
+msgstr ""
+
+#: sxconsole/volumes/forms.py:18 sxconsole/volumes/forms.py:118
+msgid "Name"
+msgstr ""
+
+#: sxconsole/volumes/forms.py:24
+msgid "Revisions"
+msgstr ""
+
+#: sxconsole/volumes/forms.py:27
+msgid "Indexing"
+msgstr ""
+
+#: sxconsole/volumes/forms.py:68
+msgid "Enter a valid value"
+msgstr ""
+
+#: sxconsole/volumes/forms.py:87
+msgid "Encryption"
+msgstr ""
+
+#: sxconsole/volumes/forms.py:88
+msgid ""
+"Important: only users with Manager permission can initialize an encrypted "
+"volume.\n"
+"The user will be prompted to set a password on first upload."
+msgstr ""
+
+#: sxconsole/volumes/forms.py:129
+msgid "You entered a wrong name!"
+msgstr ""
+
+#: sxconsole/volumes/validators.py:18
+msgid ""
+"You can't add a new volume because you have reached the max volumes limit."
+msgstr ""
+
+#: sxconsole/volumes/validators.py:22
+msgid "You can't add a new volume because this cluster has expired."
+msgstr ""
+
+#: sxconsole/volumes/validators.py:41
+msgid ""
+"You are running out of space on this cluster. Enter a smaller size and try "
+"again."
+msgstr ""
+
+#: sxconsole/volumes/validators.py:50
+msgid "This volume already exists."
+msgstr ""
+
+#: sxconsole/volumes/views.py:30
+msgid "Adding a new volume"
+msgstr ""
+
+#: sxconsole/volumes/views.py:99
+msgid "You can't edit this volume because its cluster has expired."
+msgstr ""
+
+#: sxconsole/volumes/views.py:167
+msgid "The volume has been removed."
+msgstr ""
+
+#: sxconsole/volumes/views.py:174
+msgid "The volume has been marked for deletion and will be removed soon."
+msgstr ""
+
+#: sxconsole/volumes/views.py:184
+msgid "Volume {} is now public"
+msgstr ""
+
+#: sxconsole/volumes/views.py:195
+msgid "Volume {} is now private"
+msgstr ""
+
+#: templates/404.html:11
+msgid "We are sorry, but the page you tried to access is not available."
+msgstr ""
+
+#: templates/accounts/admin_list.html:12
+msgid "Invite an admin"
+msgstr ""
+
+#: templates/accounts/admin_list.html:22 templates/clusters/cluster.html:91
+msgid "E-mail"
+msgstr ""
+
+#: templates/accounts/admin_list.html:24 templates/clusters/cluster.html:92
+msgid "Actions"
+msgstr ""
+
+#: templates/accounts/admin_list.html:37
+msgid "Manage clusters"
+msgstr ""
+
+#: templates/accounts/login_buttons.html:8
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/accounts/manage_clusters.html:16
+#: templates/clusters/s3import/task_status.html:91 templates/confirm.html:24
+#: templates/delete.html:27 templates/includes/form_buttons.html:6
+#: templates/volumes/volume_acl.html:32
+msgid "Go back"
+msgstr ""
+
+#: templates/accounts/profile.html:8
+#, python-format
+msgid "Hello, %(user)s"
+msgstr ""
+
+#: templates/accounts/profile.html:23 templates/public_base.html:20
+msgid "Change language"
+msgstr ""
+
+#: templates/admin_home.html:13
+msgid "Unlimited"
+msgstr ""
+
+#: templates/admin_home.html:18
+msgid "Total clusters"
+msgstr ""
+
+#: templates/admin_home.html:27
+msgid "Clusters size"
+msgstr ""
+
+#: templates/admin_home.html:36
+msgid "Usage"
+msgstr ""
+
+#: templates/cluster_management.html:17
+msgid "Cluster configuration"
+msgstr ""
+
+#: templates/cluster_management.html:22
+msgid "Node management"
+msgstr ""
+
+#: templates/cluster_management.html:27
+msgid "Mark as faulty"
+msgstr ""
+
+#: templates/cluster_management.html:46 templates/cluster_management.html:52
+#: templates/cluster_management.html:58 templates/volumes/volume_acl.html:46
+msgid "Loading..."
+msgstr ""
+
+#: templates/cluster_unavailable.html:6
+msgid "Cluster unavailable"
+msgstr ""
+
+#: templates/cluster_unavailable.html:8
+msgid ""
+"Failed to connect to SX cluster. Please check your configuration and make "
+"sure that at least one node is running."
+msgstr ""
+
+#: templates/clusters/cluster.html:10
+#, python-format
+msgid "This cluster has expired on %(date)s"
+msgstr ""
+
+#: templates/clusters/cluster.html:17
+#, python-format
+msgid "This cluster will expire on %(date)s"
+msgstr ""
+
+#: templates/clusters/cluster.html:31 templates/clusters/logs/header.html:8
+msgid "Access log"
+msgstr ""
+
+#: templates/clusters/cluster.html:36
+msgid "Settings"
+msgstr ""
+
+#: templates/clusters/cluster.html:50
+msgid "Volumes"
+msgstr ""
+
+#: templates/clusters/cluster.html:51 templates/volumes/volume_acl.html:39
+msgid "Users"
+msgstr ""
+
+#: templates/clusters/cluster.html:59
+msgid "Add a volume"
+msgstr ""
+
+#: templates/clusters/cluster.html:63
+msgid "Import data"
+msgstr ""
+
+#: templates/clusters/cluster.html:73
+msgid "Add a user"
+msgstr ""
+
+#: templates/clusters/cluster.html:83
+msgid "Add an administrator"
+msgstr ""
+
+#: templates/clusters/cluster.html:104
+msgid "Remove"
+msgstr ""
+
+#: templates/clusters/logs/header.html:12
+msgid "Filters"
+msgstr ""
+
+#: templates/clusters/logs/header.html:33
+msgid "Search"
+msgstr ""
+
+#: templates/clusters/logs/results.html:11
+msgid "Date"
+msgstr ""
+
+#: templates/clusters/logs/results.html:13
+msgid "Operation"
+msgstr ""
+
+#: templates/clusters/logs/results.html:14
+msgid "Path"
+msgstr ""
+
+#: templates/clusters/logs/results.html:15
+msgid "User agent"
+msgstr ""
+
+#: templates/clusters/logs/results.html:16
+msgid "IP address"
+msgstr ""
+
+#: templates/clusters/remove_admin.html:5
+#, python-format
+msgid ""
+"You are about to delete <strong>%(admin)s</strong> from %(cluster)s "
+"administrators."
+msgstr ""
+
+#: templates/clusters/s3import/form.html:33
+msgid "Import tasks"
+msgstr ""
+
+#: templates/clusters/s3import/form.html:40
+msgid "ID"
+msgstr ""
+
+#: templates/clusters/s3import/form.html:41
+msgid "Owner"
+msgstr ""
+
+#: templates/clusters/s3import/form.html:42 templates/task_list.html:21
+msgid "Status"
+msgstr ""
+
+#: templates/clusters/s3import/form.html:43
+msgid "Queued at"
+msgstr ""
+
+#: templates/clusters/s3import/form.html:44
+msgid "Ended at"
+msgstr ""
+
+#: templates/clusters/s3import/form.html:64
+#: templates/clusters/s3import/task_status.html:19
+msgid "IN PROGRESS"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:14
+msgid "ID:"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:16
+msgid "Status:"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:26
+msgid "Progress:"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:28
+#, python-format
+msgid "Importing from bucket \"%(from)s\" to volume \"%(to)s\"."
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:31
+msgid "Total size of imported data:"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:35
+msgid "not known yet"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:39
+#, python-format
+msgid "%(copied)s buckets imported, %(skipped)s skipped out of %(total)s."
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:46
+msgid "Completed at:"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:51
+msgid "Result:"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:56
+msgid "Buckets imported successfully:"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:60
+#, python-format
+msgid "\"%(bucket)s\" as \"%(volume)s\""
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:64
+#: templates/mail/s3import_task.html:16
+msgid "an existing volume was used"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:67
+#: templates/mail/s3import_task.html:16
+msgid "size of imported data:"
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:73
+#: templates/mail/s3import_task.html:20
+msgid "No buckets have been imported."
+msgstr ""
+
+#: templates/clusters/s3import/task_status.html:77
+#: templates/mail/s3import_task.html:24
+msgid "Skipped buckets:"
+msgstr ""
+
+#: templates/confirm.html:9
+msgid "Confirmation needed"
+msgstr ""
+
+#: templates/confirm.html:27
+msgctxt "brief reply to a question"
+msgid "Correct"
+msgstr ""
+
+#: templates/delete.html:9
+msgid "Heads up!"
+msgstr ""
+
+#: templates/delete.html:15
+#, python-format
+msgid "You are about to delete <strong>%(object)s</strong>."
+msgstr ""
+
+#: templates/delete.html:19
+msgid "Do you wish to continue?"
+msgstr ""
+
+#: templates/header.html:20
+msgid "Stats"
+msgstr ""
+
+#: templates/header.html:23
+msgid "Admins"
+msgstr ""
+
+#: templates/header.html:33
+msgid "Tasks"
+msgstr ""
+
+#: templates/header.html:46
+msgid "Logout"
+msgstr ""
+
+#: templates/includes/demo_footer.html:6
+msgid ""
+"This is a demo. Many functionalities are partially or completely disabled to "
+"prevent abuse."
+msgstr ""
+
+#: templates/includes/form_buttons.html:10
+msgid "Submit"
+msgstr ""
+
+#: templates/includes/form_field_label.html:10
+msgid "(optional)"
+msgstr ""
+
+#: templates/includes/pagination_nav.html:10
+#: templates/includes/pagination_nav.html:22
+msgid "First"
+msgstr ""
+
+#: templates/includes/pagination_nav.html:16
+#: templates/includes/pagination_nav.html:28
+msgid "Previous"
+msgstr ""
+
+#: templates/includes/pagination_nav.html:48
+#: templates/includes/pagination_nav.html:60
+msgid "Next"
+msgstr ""
+
+#: templates/includes/pagination_nav.html:54
+#: templates/includes/pagination_nav.html:66
+msgid "Last"
+msgstr ""
+
+#: templates/mail/invite.html:2
+#, python-format
+msgid ""
+"\n"
+"You have been invited to %(app_name)s.\n"
+"\n"
+"Click the link below to join:\n"
+"%(link)s\n"
+msgstr ""
+
+#: templates/mail/password_reset.html:2
+#, python-format
+msgid ""
+"\n"
+"You have requested a password reset for your %(app_name)s account.\n"
+"\n"
+"Click the link below to recover your account:\n"
+"%(link)s\n"
+msgstr ""
+
+#: templates/mail/s3import_task.html:2 templates/task_list.html:17
+msgid "Task"
+msgstr ""
+
+#: templates/mail/s3import_task.html:2
+msgid "finished at:"
+msgstr ""
+
+#: templates/mail/s3import_task.html:4
+msgid "Source S3 service:"
+msgstr ""
+
+#: templates/mail/s3import_task.html:5
+msgid "Destination SX cluster:"
+msgstr ""
+
+#: templates/mail/s3import_task.html:6
+msgid "Destination virtual cluster:"
+msgstr ""
+
+#: templates/mail/s3import_task.html:10
+msgid "Reason of failure:"
+msgstr ""
+
+#: templates/mail/s3import_task.html:15
+msgid "Imported buckets:"
+msgstr ""
+
+#: templates/mail/s3import_task.html:16
+msgid "as"
+msgstr ""
+
+#: templates/parts/home_node.html:7 templates/parts/home_node.html:34
+#, python-format
+msgid "Node %(ip)s"
+msgstr ""
+
+#: templates/parts/home_node.html:11 templates/parts/home_node.html:38
+#, python-format
+msgid "<small>(inter-node: %(ip)s)</small>"
+msgstr ""
+
+#: templates/parts/home_node.html:17 templates/parts/home_node.html:44
+msgid "faulty"
+msgstr ""
+
+#: templates/parts/home_node.html:25
+msgid "This node is down!"
+msgstr ""
+
+#: templates/parts/home_node.html:54
+msgid "System"
+msgstr ""
+
+#: templates/parts/home_node.html:57
+msgid "Local time"
+msgstr ""
+
+#: templates/parts/home_node.html:62
+msgid "CPU Cores"
+msgstr ""
+
+#: templates/parts/home_node.html:65
+msgid "RAM"
+msgstr ""
+
+#: templates/parts/home_node.html:68
+msgid "Disk usage"
+msgstr ""
+
+#: templates/parts/home_node.html:70
+#, python-format
+msgid "(%(free_space)s free)"
+msgstr ""
+
+#: templates/parts/home_node.html:74
+msgid "Virtual size"
+msgstr ""
+
+#: templates/parts/home_node.html:81
+msgid "SX version"
+msgstr ""
+
+#: templates/parts/home_node.html:84
+msgid "SX-Storage version"
+msgstr ""
+
+#: templates/parts/home_node.html:89
+msgid "Node UUID"
+msgstr ""
+
+#: templates/parts/home_node.html:92
+msgid "SX-Storage path"
+msgstr ""
+
+#: templates/side_panel.html:16
+msgid "Add cluster"
+msgstr ""
+
+#: templates/side_panel.html:27
+#, python-format
+msgid "%(cluster_usage)s used"
+msgstr ""
+
+#: templates/side_panel.html:35
+#, python-format
+msgid "List of clusters (%(count)s)"
+msgstr ""
+
+#: templates/side_panel.html:56
+msgid "There are no clusters yet"
+msgstr ""
+
+#: templates/stats.html:16
+msgid "Navigation"
+msgstr ""
+
+#: templates/stats.html:19
+msgid "Select interval"
+msgstr ""
+
+#: templates/stats.html:24
+msgid "3 hours"
+msgstr ""
+
+#: templates/stats.html:27
+msgid "24 hours"
+msgstr ""
+
+#: templates/stats.html:30
+msgid "1 week"
+msgstr ""
+
+#: templates/stats.html:33
+msgid "1 month"
+msgstr ""
+
+#: templates/stats.html:36
+msgid "1 year"
+msgstr ""
+
+#: templates/stats.html:45
+msgid "Refresh"
+msgstr ""
+
+#: templates/stats.html:52
+msgid "Auto refresh"
+msgstr ""
+
+#: templates/stats.html:55
+msgid "Auto"
+msgstr ""
+
+#: templates/stats.html:63
+msgid "Charts"
+msgstr ""
+
+#: templates/stats.html:71
+msgid "Back to top"
+msgstr ""
+
+#: templates/stats.html:78
+msgid "Loading statistics..."
+msgstr ""
+
+#: templates/superadmin_home.html:12
+msgid "Cluster info"
+msgstr ""
+
+#: templates/superadmin_home.html:14
+msgctxt "cluster url"
+msgid "host"
+msgstr ""
+
+#: templates/superadmin_home.html:16
+msgctxt "cluster port"
+msgid "port"
+msgstr ""
+
+#: templates/superadmin_home.html:25
+msgid "Cluster size (virtual)"
+msgstr ""
+
+#: templates/superadmin_home.html:30
+msgid "Available disk space"
+msgstr ""
+
+#: templates/superadmin_home.html:33 templates/superadmin_home.html:65
+msgid "unavailable"
+msgstr ""
+
+#: templates/superadmin_home.html:43
+msgid "Virtual clusters"
+msgstr ""
+
+#: templates/superadmin_home.html:48
+msgid "Allocated size"
+msgstr ""
+
+#: templates/superadmin_home.html:57
+msgid "Usage (pre-replica)"
+msgstr ""
+
+#: templates/superadmin_home.html:62
+msgid "Usage (post-replica)"
+msgstr ""
+
+#: templates/superadmin_home.html:83
+msgid "(zoneless)"
+msgstr ""
+
+#: templates/task_list.html:19
+msgid "Triggered by"
+msgstr ""
+
+#: templates/task_list.html:22
+msgid "Queue date"
+msgstr ""
+
+#: templates/task_list.html:23
+msgid "Start date"
+msgstr ""
+
+#: templates/task_list.html:24
+msgid "End date"
+msgstr ""
+
+#: templates/users/confirm_send_password_reset.html:5
+#, python-format
+msgid "E-mail with password reset will be sent to <strong>%(email)s</strong>."
+msgstr ""
+
+#: templates/users/delete_user.html:5
+#, python-format
+msgid "You are about to delete user <strong>%(email)s</strong>."
+msgstr ""
+
+#: templates/users/password_set.html:6
+msgid "Success!"
+msgstr ""
+
+#: templates/users/password_set.html:8
+#, python-format
+msgid "Your password has been set. You can now log in to %(app_name)s."
+msgstr ""
+
+#: templates/users/token_invalid.html:6
+msgid "Invalid token"
+msgstr ""
+
+#: templates/users/token_invalid.html:8
+msgid ""
+"You can't set your password because this token expired, or has been already "
+"used up."
+msgstr ""
+
+#: templates/volumes/delete_volume.html:5
+#, python-format
+msgid ""
+"You are about to delete volume <strong>%(volume)s</strong> in cluster "
+"<strong>%(cluster)s</strong>."
+msgstr ""
+
+#: templates/volumes/delete_volume.html:14
+msgid ""
+"<strong>This volume is not empty!</strong> If you know what you are doing, "
+"enter its name below."
+msgstr ""
+
+#: templates/volumes/edit_volume.html:11
+#, python-format
+msgid "%(volume_name)s settings"
+msgstr ""
+
+#: templates/volumes/volume_acl.html:19
+msgid "Make private"
+msgstr ""
+
+#: templates/volumes/volume_acl.html:26
+msgid "Make public"
+msgstr ""
+
+#: templates/volumes/volume_acl.html:42
+msgid "New user"
+msgstr ""

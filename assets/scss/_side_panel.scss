@@ -1,0 +1,97 @@
+.side-panel {
+    display: flex;
+    flex-direction: column;
+
+    // Remove padding from col-*, panel_body will have padding instead
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: $screen-sm-min) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    &__heading, &__body {
+        padding: $unit;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $header-height;
+        background: $brand-primary;
+        color: #fff;
+        text-transform: uppercase;
+        white-space: nowrap;
+        &:hover, &:focus {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    &__logo {
+        height: $header-height - 2 * $unit;
+    }
+
+    &__body {
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        background: $well-bg;
+        color: $brand-primary;
+
+        border-top: 1px solid $well-border;
+        border-right: none;
+
+        @media (min-width: $screen-sm-min) {
+            border-top: none;
+            border-right: 1px solid $well-border;
+        }
+
+        & > * {
+            flex-shrink: 0;
+            & + * {
+                margin-top: $unit;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: $padding-large-vertical $padding-large-horizontal;
+        color: $brand-primary;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            background: $gray-lighter;
+        }
+
+        &--active {
+            &, &:hover, &:focus {
+                color: #fff;
+                background-color: $brand-primary;
+            }
+        }
+
+        & > * + * {
+            margin-top: $padding-large-vertical;
+        }
+    }
+}
+
+.cluster-list, .cluster-list--empty {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    position: relative; // for perfectScrollbar handle
+
+    @media (min-width: $screen-sm-min) {
+        height: 0; // firefox needs this to make cluster list shrinkable
+    }
+}

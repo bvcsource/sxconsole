@@ -1,0 +1,39 @@
+.modal-content {
+    border: 0;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.modal-alert {
+    margin: -$modal-inner-padding;
+    margin-top: -$modal-inner-padding - 1; // cover modal-title border
+    margin-bottom: $paragraph-margin;
+    border-width: 1px 0 0;
+    padding: $modal-inner-padding;
+}
+
+.ReactModalPortal > * {
+    // When the modal is closed, overlay div has no css class
+    // This selector should be overridden by the `&--after-open` class below
+    opacity: 0;
+}
+
+.ReactModal__Overlay {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity 200ms ease-in-out;
+    background: rgba(0, 0, 0, 0.15);
+    &--after-open {
+        opacity: 1;
+    }
+    &--before-close {
+        opacity: 0;
+    }
+}
+
+.ReactModal__Content:focus {
+    outline: none
+}

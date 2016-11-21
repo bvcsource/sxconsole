@@ -1,0 +1,97 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n sizefieldtags staticfiles %}
+
+{% block main %}
+    <header class="page-title">
+        <span class="fa fa-area-chart"></span>
+        <span class="js-trunc">{% trans "Dashboard" %}</span>
+    </header>
+
+    <div class="well">
+        <p>
+            {% trans "Cluster info" %}
+            <span class="text-muted">
+                ({% trans "host" context "cluster url" %}:
+                {{ cluster.address }}
+                {% trans "port" context "cluster port" %}:
+                {{ cluster.port }})
+            </span>
+        </p>
+        <div class="row">
+            <div class="col-xs-4 text-center">
+                <p>
+                    <span class="fa fa-pie-chart fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Cluster size (virtual)" %}
+                    <br>
+                    {{ cluster.virtual_size | filesize }}
+                <p>
+                </p>
+                    {% trans "Available disk space" %}
+                    <br>
+                    {% if nodes_down %}
+                        <span class="text-muted">{% trans "unavailable" %}</span>
+                    {% else %}
+                        {{ cluster.physical_size | filesize }}
+                    {% endif %}
+                </p>
+            </div>
+            <div class="col-xs-4 text-center">
+                <p>
+                    <span class="fa fa-server fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Virtual clusters" %}
+                    <br>
+                    {{ vcluster_info.count }}
+                </p>
+                <p>
+                    {% trans "Allocated size" %}
+                    <br>
+                    {{ vcluster_info.allocated_size | filesize }}
+                </p>
+            </div>
+            <div class="col-xs-4 text-center">
+                <p>
+                    <span class="fa fa-hdd-o fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Usage (pre-replica)" %}
+                    <br>
+                    {{ disk_usage.pre_replica | filesize }}
+                </p>
+                <p>
+                    {% trans "Usage (post-replica)" %}
+                    <br>
+                    {% if nodes_down %}
+                        <span class="text-muted">{% trans "unavailable" %}</span>
+                    {% else %}
+                        {{ disk_usage.post_replica | filesize }}
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        {% if has_zones %}
+            {% for zone, nodes in zones.items %}
+                <header class="page-title">
+                    {% if zone %}
+                        <span class="fa fa-server"></span>
+                        {{ zone }}
+                    {% else %}
+                        <span class="text-muted">
+                            {% trans "(zoneless)" %}
+                        </span>
+                    {% endif %}
+                </header>
+                {% for node in nodes %}
+                    {% include 'parts/home_node.html' %}
+                {% endfor %}
+            {% endfor %}
+        {% else %}
+            {% for node in nodes %}
+                {% include 'parts/home_node.html' %}
+            {% endfor %}
+        {% endif %}
+    </section>
+{% endblock main %}

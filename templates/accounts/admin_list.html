@@ -1,0 +1,56 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n %}
+
+{% block main %}
+    <header class="page-title page-title--with-buttons">
+        <div>
+            <span class="fa fa-list"></span>
+            <span class="js-trunc">{% trans "Administrators" %}</span>
+        </div>
+        <div>
+            <a class="btn btn-default btn-xs" href="{% url 'invite' %}">
+                {% trans "Invite an admin" %}
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="table-responsive">
+            <table class="table-common table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-name">{% trans "E-mail" %}</th>
+                        <th>{% trans "Level" %}</th>
+                        <th class="col-actions">{% trans "Actions" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for admin in admins reversed %}
+                    <tr>
+                        <td class="col-name">
+                            <span class="js-trunc">{{ admin }}</span>
+                        </td>
+                        <td> {{ admin.get_level_display }} </td>
+                        <td class="col-actions">
+                            {% if admin != user and not admin.is_root_admin %}
+                            <a class="btn btn-default btn-xs" href="{% url 'manage_admin_clusters' admin.pk %}">
+                                {% trans "Manage clusters" %}
+                            </a>
+                                {% if user.is_root_admin or not admin.is_superadmin %}
+                                    <a class="btn btn-danger btn-xs" href="{% url 'admin_delete' admin.pk %}">
+                                        {% trans "Delete" %}
+                                    </a>
+                                {% else %}
+                                    &ndash;
+                                {% endif %}
+                            {% else %}
+                                &ndash;
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+    </section>
+{% endblock main %}

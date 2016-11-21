@@ -1,0 +1,11 @@
+<div class="form-group {{ field.errors | yesno:'has-error,'}}">
+    {% include 'includes/form_field_label.html' %}
+    <div id="size-widget" data-init="{{ size_init }}"></div>
+    {% if field.errors %}
+        <span class="help-block">
+            {% for e in field.errors %}
+                {{ e }} {% if not forloop.last %}<br>{% endif %}
+            {% endfor %}
+        </span>
+    {% endif %}
+</div>

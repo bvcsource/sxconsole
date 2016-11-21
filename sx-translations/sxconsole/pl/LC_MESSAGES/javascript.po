@@ -1,0 +1,413 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"If one node of the cluster dies, the data stored in this volume will become "
+"unavailable. Recommended value: 2 or greater."
+msgstr ""
+"Jeżeli jeden z węzłów klastra zostanie uszkodzony, dane przechowywane na "
+"tym woluminie staną się niedostępne. Zalecana wartość: 2 lub większa."
+
+msgid "{{value}} of {{limit}}"
+msgstr "{{value}} z {{limit}}"
+
+msgid "Unlimited"
+msgstr "(nielimitowane)"
+
+msgid "Users"
+msgstr "Użytkownicy"
+
+msgid "Volumes"
+msgstr "Woluminy"
+
+msgid "Allocated space"
+msgstr "Zaalokowane miejsce"
+
+msgid "Space usage"
+msgstr "Zajęte miejsce"
+
+msgid "Delete volumes?"
+msgstr "Usunąć woluminy?"
+
+msgid "Delete selected volumes"
+msgstr "Usuń wybrane woluminy"
+
+msgid "The following volumes have not been deleted:"
+msgstr "Następujące woluminy nie zostały usunięte:"
+
+msgid "The following volumes will be deleted:"
+msgstr "Następujące woluminy zostaną usunięte:"
+
+msgid "({{done}}/{{all}}) Deleting volumes..."
+msgstr "({{done}}/{{all}}) Usuwanie woluminów..."
+
+msgid "Failed to delete some volumes."
+msgstr "Nie udało się usunąć niektórych woluminów."
+
+msgid "Selected volumes have been deleted."
+msgstr "Usunięto wybrane woluminy."
+
+msgid "Delete"
+msgstr "Usuń"
+
+msgid "Close"
+msgstr "Zamknij"
+
+msgid "Delete users?"
+msgstr "Usunąć użytkowników?"
+
+msgid "Delete selected users"
+msgstr "Usuń wybranych użytkowników"
+
+msgid "The following users have not been deleted:"
+msgstr "Następujący użytkownicy nie zostali usunięci:"
+
+msgid "The following users will be deleted:"
+msgstr "Następujący użytkownicy zostaną usunięci:"
+
+msgid "({{done}}/{{all}}) Deleting users..."
+msgstr "({{done}}/{{all}}) Usuwanie użytkowników..."
+
+msgid "Failed to delete some users."
+msgstr "Nie udało się usunąć niektórych użytkowników."
+
+msgid "Selected users have been deleted."
+msgstr "Usunięto wybranych użytkowników."
+
+msgid "Login options"
+msgstr "Opcje logowania"
+
+msgid "Show login options"
+msgstr "Pokaż opcje logowania"
+
+msgid "Loading..."
+msgstr "Ładowanie..."
+
+msgid "Failed to load login options."
+msgstr "Wystąpił problem podczas pobierania opcji logowania."
+
+msgid "Retry"
+msgstr "Spróbuj ponownie"
+
+msgid "Via S3 protocol"
+msgstr "Poprzez protokół S3"
+
+msgid "S3 endpoint"
+msgstr "Adres S3"
+
+msgid "Access key ID"
+msgstr "ID klucza dostępu"
+
+msgid "Secret access key"
+msgstr "Prywatny klucz dostępu"
+
+msgid "Quota"
+msgstr "Przydział"
+
+msgid "Submit"
+msgstr "Zapisz"
+
+msgid "Failed to submit the form."
+msgstr "Przy wysyłaniu formularza wystąpił błąd."
+
+msgid "Loading users..."
+msgstr "Ładowanie użytkowników..."
+
+msgid "Failed to load users."
+msgstr "Wystąpił problem podczas pobierania użytkowników."
+
+msgid "There are no users yet"
+msgstr "Brak użytkowników"
+
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+msgid "Actions"
+msgstr "Operacje"
+
+msgid "Manage quota"
+msgstr "Ustaw przydział"
+
+msgid "Reset password"
+msgstr "Resetuj hasło"
+
+msgid "Cannot delete reserved users."
+msgstr "Nie można usuwać zarezerwowanych użytkowników."
+
+msgid "{{quota}} ({{quotaUsed}} used)"
+msgstr "{{quota}} (zużyto {{quotaUsed}})"
+
+msgid "Loading volumes..."
+msgstr "Ładowanie woluminów..."
+
+msgid "Failed to load volumes."
+msgstr "Wystąpił problem podczas pobierania woluminów."
+
+msgid "There are no volumes yet"
+msgstr "Brak woluminów"
+
+msgid "Index"
+msgstr "Indeksowanie"
+
+msgid "Name"
+msgstr "Nazwa"
+
+msgid "Usage"
+msgstr "Zajęte miejsce"
+
+msgid "Size"
+msgstr "Rozmiar"
+
+msgid "Replicas"
+msgstr "Liczba replik"
+
+msgid "Revs"
+msgstr "Rewizje"
+
+msgid "This volume is encrypted"
+msgstr "Ten wolumin jest zaszyfrowany"
+
+msgid "Manage ACL"
+msgstr "Zarządzaj uprawnieniami"
+
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgid "Cannot mass-delete non-empty volumes."
+msgstr "Niepuste woluminy należy usuwać pojedynczo."
+
+msgid "Failed to fetch acess logs. Try again later."
+msgstr "Nie udało się pobrać raportu dzienników dostępu. Spróbuj ponownie później"
+
+msgid "Fetching access logs..."
+msgstr "Pobieranie raportu dzienników dostępu..."
+
+msgid "Failed to queue the task."
+msgstr "Wystąpił problem przy kolejkowaniu zadania."
+
+msgid "The following command will be executed:"
+msgstr "Następująca komenda zostanie wywołana:"
+
+msgid "Failed to load preview."
+msgstr "Wystąpił problem podczas pobierania podglądu."
+
+msgid "Faulty"
+msgstr "Wadliwy"
+
+msgid "Marked as faulty"
+msgstr "Oznaczony jako wadliwy"
+
+msgid "Healthy"
+msgstr "Zdrowy"
+
+msgid "Submit changes?"
+msgstr "Zapisać zmiany?"
+
+msgid "Submit changes"
+msgstr "Zapisz zmiany"
+
+msgid "Node details"
+msgstr "Szczegóły węzła"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Node UUID"
+msgstr "UUID węzła"
+
+msgid "Node IP"
+msgstr "IP węzła"
+
+msgid "Internal IP"
+msgstr "Wewnętrzne IP"
+
+msgid "Capacity"
+msgstr "Pojemność"
+
+msgid "SX version"
+msgstr "Wersja SX"
+
+msgid "Adding a new node"
+msgstr "Dodawanie nowego węzła"
+
+msgid "Add node"
+msgstr "Dodaj węzeł"
+
+msgid "Modifying a node"
+msgstr "Modyfikacja węzła"
+
+msgid "Modify"
+msgstr "Modyfikuj"
+
+msgid "Restore"
+msgstr "Przywróc"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Add zone"
+msgstr "Dodaj strefę"
+
+msgid "Delete zone?"
+msgstr "Usunąć strefę?"
+
+msgid "Zone {{name}} will be deleted."
+msgstr "Strefa {{name}} zostanie usunięta."
+
+msgid "This zone is empty."
+msgstr "Ta strefa jest pusta."
+
+msgid "Zone name"
+msgstr "Nazwa strefy"
+
+msgid "This is not a valid zone name."
+msgstr "Nieprawidłowa nazwa strefy."
+
+msgid "This zone already exists."
+msgstr "Ta strefa już istnieje."
+
+msgid "This zone name is too long."
+msgstr "Nazwa strefy jest zbyt długa."
+
+msgid "Rename zone"
+msgstr "Zmień nazwę strefy"
+
+msgid "Rename"
+msgstr "Zmień nazwę"
+
+msgid "New node"
+msgstr "Nowy węzeł"
+
+msgid "Set up node replacement"
+msgstr "Skonfiguruj wymianę węzła"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Undo"
+msgstr "Cofnij"
+
+msgid "New ip: {{ip}}"
+msgstr "Nowy adres: {{ip}}"
+
+msgid "{{operation}} in progress"
+msgstr "{{operation}} w toku"
+
+msgid "There are nodes that need your attention!"
+msgstr "Niektóre węzły potrzebują twojej uwagi!"
+
+msgid "Certain cluster management operations may be unavailable."
+msgstr "Pewne opcje zarządzania klastrem mogą być niedostępne."
+
+msgid "This node is faulty and needs to be replaced."
+msgstr "Ten węzeł jest wadliwy i należy go wymienić."
+
+msgid "This node is not responding."
+msgstr "Ten węzeł nie odpowiada."
+
+msgid "(zoneless)"
+msgstr "(nieprzypisane)"
+
+msgid "Node size"
+msgstr "Rozmiar węzła"
+
+msgid "This is not a valid IP address"
+msgstr "Nieprawidłowy adres IP"
+
+msgid "Node internal IP"
+msgstr "Wewnętrzne IP węzła"
+
+msgid "This is not a valid size"
+msgstr "Nieprawidłowy rozmiar"
+
+msgid "Cluster name"
+msgstr "Nazwa klastra"
+
+msgid "Administrator rights"
+msgstr "Prawa administratora"
+
+msgid "Remove from admins"
+msgstr "Usuń z administratorów"
+
+msgid "Make administrator"
+msgstr "Dodaj do administratorów"
+
+msgid "Stored data"
+msgstr "Przechowywane dane"
+
+msgid "System load average"
+msgstr "Średnia obciążenia systemu (loadavg)"
+
+msgid "Memory free"
+msgstr "Dostępna pamięć"
+
+msgid "Memory used"
+msgstr "Pamięć w użyciu"
+
+msgid "Disk free"
+msgstr "Wolne miejsce"
+
+msgid "Disk usage"
+msgstr "Zajęte miejsce"
+
+msgid "Incoming traffic"
+msgstr "Ruch sieciowy przychodzący"
+
+msgid "Outgoing traffic"
+msgstr "Ruch sieciowy wychodzący"
+
+msgid "Task status"
+msgstr "Stan zadania"
+
+msgid "Task"
+msgstr "Zadanie"
+
+msgid "(ID: {{id}})"
+msgstr "(ID: {{id}})"
+
+msgid "Added"
+msgstr "Dodano"
+
+msgid "Start date"
+msgstr "Data rozpoczęcia"
+
+msgid "End date"
+msgstr "Data zakończenia"
+
+msgid "Details"
+msgstr "Szczegóły"
+
+msgid "Last check: {{when}}"
+msgstr "Ostatnio sprawdzono: {{when}}"
+
+msgid "(optional)"
+msgstr "(opcjonalne)"
+
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgid "Permissions"
+msgstr "Uprawnienia"
+
+msgid "Read"
+msgstr "Odczyt"
+
+msgid "The user can read files on the volume"
+msgstr "Użytkownik może odczytać pliki na woluminie"
+
+msgid "Write"
+msgstr "Zapis"
+
+msgid "The user can modify files on the volume"
+msgstr "Użytkownik może modyfikować pliki na woluminie"
+
+msgid "Manager"
+msgstr "Zarządzanie"
+
+msgid "The user can manage permissions of other users on this volume"
+msgstr "Użytkownik może zarządzać uprawnieniami innych użytkowników tego woluminu"

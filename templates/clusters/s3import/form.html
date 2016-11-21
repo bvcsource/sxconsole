@@ -1,0 +1,89 @@
+{% extends 'simple_form.html' %}
+{% load i18n staticfiles %}
+
+{% block page_header %}
+    <header class="page-title">
+        <span class="fa fa-cloud-download"></span>
+        <span class="js-trunc">{{ view.title }}</span>
+    </header>
+{% endblock page_header %}
+
+{% block main %}
+    <form class="js-form" action="{{ request.get_full_path }}" method="POST">
+        {% include 'includes/non_field_errors.html' %}
+
+        {% csrf_token %}
+        {% include 'includes/form_field_vertical.html' with field=form.s3_host %}
+        {% include 'includes/form_field_vertical.html' with field=form.s3_key_id %}
+        {% include 'includes/form_field_vertical.html' with field=form.s3_secret_key %}
+        {% include 'includes/form_field_vertical.html' with field=form.replicas %}
+        {% include 'includes/form_field_vertical.html' with field=form.advanced %}
+
+        <div class="js-form-advanced hidden">
+            {% include 'includes/form_field_vertical.html' with field=form.default_size %}
+            {% include 'includes/form_field_vertical.html' with field=form.s3_port %}
+            {% include 'includes/form_field_vertical.html' with field=form.s3_validate_certs %}
+        </div>
+
+        {% include 'includes/form_buttons.html' %}
+    </form>
+
+    <header class="page-title">
+        <span class="fa fa-tasks"></span>
+        <span>{% trans "Import tasks" %}</span>
+    </header>
+
+    <div class="table-responsive">
+        <table class="table-common">
+            <thead>
+                <tr>
+                    <th class="col-name">{% trans "ID" %}</th>
+                    <th>{% trans "Owner" %}</th>
+                    <th>{% trans "Status" %}</th>
+                    <th>{% trans "Queued at" %}</th>
+                    <th>{% trans "Ended at" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for task in tasks %}
+                <tr>
+                    <td class="col-name">
+                        <a href="{% url 's3import_single_task' pk=pk taskid=task.id %}" class="js-trunc">{{ task.id }}</a>
+                    </td>
+
+                    <td>
+                    {% if task.admin.email %}
+                        {{ task.admin.email }}
+                    {% else %}
+                        --
+                    {% endif %}
+                    </td>
+
+                    <td>
+                    {% if task.status == 'PROGRESS' %}
+                        {% trans "IN PROGRESS" %}
+                    {% else %}
+                        {{ task.status }}
+                    {% endif %}
+                    </td>
+
+                    <td>{{ task.queue_date }}</td>
+
+                    <td>
+                    {% if task.ready and task.end_date %}
+                        {{ task.end_date }}
+                    {% else %}
+                        --
+                    {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/s3importForm.js' %}" defer></script>
+{% endblock %}

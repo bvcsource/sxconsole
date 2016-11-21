@@ -1,0 +1,44 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n sizefieldtags %}
+
+{% block main %}
+    <header class="page-title">
+        <span class="fa fa-area-chart"></span>
+        <span class="js-trunc">{% trans "Dashboard" %}</span>
+    </header>
+
+
+    <div class="well">
+        <div class="row">
+            {% trans "Unlimited" as unlimited %}
+            <div class="col-xs-4">
+                <p class="text-center">
+                    <span class="fa fa-server fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Total clusters" %}
+                    <br>
+                    {{ total_clusters }}
+                </p>
+            </div>
+            <div class="col-xs-4">
+                <p class="text-center">
+                    <span class="fa fa-hdd-o fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Clusters size" %}
+                    <br>
+                    {{ clusters_size | filesize }}
+                </p>
+            </div>
+            <div class="col-xs-4">
+                <p class="text-center">
+                    <span class="fa fa-pie-chart fa-2x text-primary"></span>
+                    <br>
+                    {% trans "Usage" %}
+                    <br>
+                    {{ used_size | filesize }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock main %}

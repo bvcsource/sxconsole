@@ -1,0 +1,10 @@
+{% extends BASE_TEMPLATE %}
+{% load staticfiles %}
+
+{% block main %}
+    <div id="task-status" data-init="{{ task_status_init }}"></div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/taskStatus.js' %}" defer></script>
+{% endblock scripts %}

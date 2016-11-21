@@ -1,0 +1,24 @@
+$screen-xl: 1366px;
+$screen-xl-min: $screen-xl;
+$screen-lg-max: ($screen-xl-min - 1);
+
+.visible-xl-inline {
+    display: inline;
+    @media (max-width: $screen-xl-min) {
+        display: none;
+    }
+}
+
+.hidden-xl {
+    @media (min-width: $screen-xl-min) {
+        display: none;
+    }
+}
+
+.font-large {
+    font-size: $font-size-large;
+}
+
+.font-huge {
+    font-size: $unit * 2;
+}

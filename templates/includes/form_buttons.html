@@ -1,0 +1,12 @@
+{% load i18n %}
+
+<div>
+    {% if not hide_go_back %}
+        <button class="btn btn-default" type="button" onClick="history.back()">
+            {% trans "Go back" %}
+        </button>
+    {% endif %}
+    <button class="btn btn-primary" type="submit">
+        {{ button_text | default:_("Submit") }}
+    </button>
+</div>

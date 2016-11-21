@@ -1,0 +1,19 @@
+{% extends BASE_TEMPLATE %}
+
+{% block page_header %}
+    <header class="page-title">
+        <span class="fa fa-pencil"></span>
+        <span class="js-trunc">{{ view.title }}</span>
+    </header>
+{% endblock page_header %}
+
+{% block main %}
+    {% if view.help_text %}
+        <div class="alert alert-info">
+            {{ view.help_text }}
+        </div>
+    {% endif %}
+    {% block form %}
+        {% include 'includes/form.html' %}
+    {% endblock form %}
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends BASE_TEMPLATE %}
+{% load i18n sizefieldtags staticfiles sxconsole %}
+
+{% block page_header %}
+    <header class="page-title">
+        <span class="fa fa-clock-o"></span>
+        <span>{{ view.title }}</span>
+    </header>
+{% endblock page_header %}
+
+{% block main %}
+
+    <div id="refresh">
+        <h4>{% trans "ID:" %}</h4>
+        <p>{{ taskid }}</p>
+        <h4>{% trans "Status:" %}</h4>
+        <p>
+        {% if status == 'PROGRESS' %}
+            {% trans "IN PROGRESS" %}
+        {% else %}
+            {{ status }}
+        {% endif %}
+        </p>
+
+        {% if status == 'PROGRESS' %}
+            <h4>{% trans "Progress:" %}</h4>
+            <p>
+                {% blocktrans trimmed with from=current_from to=current_to %}
+                Importing from bucket "{{ from }}" to volume "{{ to }}".
+                {% endblocktrans %}
+                {% trans "Total size of imported data:" %}
+                    {% if data_size != None %}
+                        {{ data_size|filesizeformat }}.
+                    {% else %}
+                        {% trans "not known yet" %}.
+                    {% endif %}
+            </p>
+            <p>
+                {% blocktrans trimmed with copied=copied skipped=skipped total=total %}
+                {{ copied }} buckets imported, {{ skipped }} skipped out of {{ total }}.
+                {% endblocktrans %}
+            </p>
+
+        {% elif ready %}
+            {% if end_date %}
+            <h4>{% trans "Completed at:" %}</h4>
+            <p>{{ end_date }}</p>
+            {% endif %}
+
+            {% if info %}
+            <h4>{% trans "Result:" %}</h4>
+            <p>{{ info }}</p>
+            {% endif %}
+
+            {% if imported_buckets %}
+            <h4>{% trans "Buckets imported successfully:" %}</h4>
+            <ul>
+                {% for bucket, volume, data_size, volume_created in imported_buckets %}
+                <li>
+                {% blocktrans trimmed with bucket=bucket volume=volume %}
+                    "{{ bucket }}" as "{{ volume }}"
+                {% endblocktrans %}
+                {% if not volume_created %}
+                    - {% trans "an existing volume was used" %}
+                {% endif %}
+                {% if data_size != None %}
+                ({% trans "size of imported data:" %} {{ data_size|filesizeformat }})
+                {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>{% trans "No buckets have been imported." %}</p>
+            {% endif %}
+
+            {% if skipped_buckets %}
+            <h4>{% trans "Skipped buckets:" %}</h4>
+            <ul>
+                {% for bucket in skipped_buckets %}
+                <li>
+                    "{{ bucket }}"
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+        {% endif %}
+    </div>
+
+    <a class="btn btn-default" href="{% url 's3import' pk=pk %}">
+        {% trans "Go back" %}
+    </a>
+
+{% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/s3importStatus.js' %}" defer></script>
+{% endblock %}

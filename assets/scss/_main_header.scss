@@ -1,0 +1,33 @@
+.main-nav {
+    margin-left: -$unit;
+    margin-right: -$unit;
+    margin-bottom: $unit;
+    display: flex;
+    padding: 0 $unit;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid $well-border;
+    background: $well-bg;
+
+    &__item {
+        background: transparent;
+        padding: $padding-large-vertical $padding-large-horizontal;
+        border: none;
+        &:focus {
+            text-decoration: none;
+        }
+        &:hover {
+            background: $gray-lighter;
+            text-decoration: none;
+        }
+        &--danger {
+            color: $brand-danger;
+        }
+    }
+    &__space {
+        flex-grow: 1;
+    }
+    @media (min-width: $screen-sm-min) {
+        min-height: $header-height;
+    }
+}

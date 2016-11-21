@@ -1,0 +1,415 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"If one node of the cluster dies, the data stored in this volume will become "
+"unavailable. Recommended value: 2 or greater."
+msgstr ""
+"Wenn ein Knoten des Clusters ausfällt, ist das Volume nicht mehr verfügbar. "
+"Empfohlener Wert: 2 oder größer."
+
+msgid "{{value}} of {{limit}}"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
+msgid "Volumes"
+msgstr ""
+
+msgid "Allocated space"
+msgstr ""
+
+msgid "Space usage"
+msgstr ""
+
+msgid "Delete volumes?"
+msgstr "Volumes löschen?"
+
+msgid "Delete selected volumes"
+msgstr "Ausgewählte Volumes löschen"
+
+msgid "The following volumes have not been deleted:"
+msgstr "Folgende Volumes wurden nicht gelöscht:"
+
+msgid "The following volumes will be deleted:"
+msgstr "Folgende Volumes werden gelöscht:"
+
+msgid "({{done}}/{{all}}) Deleting volumes..."
+msgstr "({{done}}/{{all}}) Lösche Volumes..."
+
+msgid "Failed to delete some volumes."
+msgstr "Einige Volumes konnten nicht gelöscht werden."
+
+msgid "Selected volumes have been deleted."
+msgstr "Ausgewählte Volumes wurden gelöscht."
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Delete users?"
+msgstr "Benutzer löschen?"
+
+msgid "Delete selected users"
+msgstr "Ausgewählte Benutzer löschen"
+
+msgid "The following users have not been deleted:"
+msgstr "Folgende User wurden nicht gelöscht:"
+
+msgid "The following users will be deleted:"
+msgstr "Folgende Benutzer werden gelöscht:"
+
+msgid "({{done}}/{{all}}) Deleting users..."
+msgstr "({{done}}/{{all}}) Lösche Benutzer..."
+
+msgid "Failed to delete some users."
+msgstr "Einige Benutzer konnten nicht gelöscht werden."
+
+msgid "Selected users have been deleted."
+msgstr "Ausgewählte Benutzer wurden gelöscht."
+
+msgid "Login options"
+msgstr "Login Optionen"
+
+msgid "Show login options"
+msgstr "Zeige Login Optionen"
+
+msgid "Loading..."
+msgstr "Läd..."
+
+msgid "Failed to load login options."
+msgstr "Fehler beim Laden der Login Optionen"
+
+msgid "Retry"
+msgstr "Wiederholen"
+
+msgid "Via S3 protocol"
+msgstr "Mit S3 Protokol"
+
+msgid "S3 endpoint"
+msgstr "S3 Endpunkt"
+
+msgid "Access key ID"
+msgstr "Zugriffsschlüssel ID"
+
+msgid "Secret access key"
+msgstr "Geheimer Zugriffsschlüssel"
+
+msgid "Quota"
+msgstr ""
+
+msgid "Submit"
+msgstr "Absenden"
+
+msgid "Failed to submit the form."
+msgstr ""
+
+msgid "Loading users..."
+msgstr "Läd Benutzer..."
+
+msgid "Failed to load users."
+msgstr "Kann Benutzer nicht laden."
+
+msgid "There are no users yet"
+msgstr "Es gibt keine anderen Benutzer"
+
+msgid "Username"
+msgstr "Benutzername"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Manage quota"
+msgstr ""
+
+msgid "Reset password"
+msgstr "Passwort zurücksetzen"
+
+msgid "Cannot delete reserved users."
+msgstr "Verwaltungsbenutzer können nicht gelöscht werden."
+
+msgid "{{quota}} ({{quotaUsed}} used)"
+msgstr ""
+
+msgid "Loading volumes..."
+msgstr "Läd Volumes..."
+
+msgid "Failed to load volumes."
+msgstr "Volumes konnten nicht geladen werden."
+
+msgid "There are no volumes yet"
+msgstr "Es existieren noch keine Volumes."
+
+msgid "Index"
+msgstr "Index"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Usage"
+msgstr "Verwendung"
+
+msgid "Size"
+msgstr "Größe"
+
+msgid "Replicas"
+msgstr "Kopien"
+
+msgid "Revs"
+msgstr "Versionen"
+
+msgid "This volume is encrypted"
+msgstr "Das Laufwerk ist verschlüsselt"
+
+msgid "Manage ACL"
+msgstr "Verwalte ACL"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Cannot mass-delete non-empty volumes."
+msgstr "Mehrfach-Löschung nicht leerer Volumes ist nicht möglich"
+
+msgid "Failed to fetch acess logs. Try again later."
+msgstr "Kann Zugriffs-Logs nicht abrufen. Bitte versuche es später erneut."
+
+msgid "Fetching access logs..."
+msgstr "Zugriffs-Logs abrufen..."
+
+msgid "Failed to queue the task."
+msgstr "Aufgabe konnte nicht eingeplant werden"
+
+msgid "The following command will be executed:"
+msgstr "Folgender Befehl wird ausgeführt:"
+
+msgid "Failed to load preview."
+msgstr "Vorschau kann nicht geladen werden"
+
+msgid "Faulty"
+msgstr "Defekt"
+
+msgid "Marked as faulty"
+msgstr "Markiert als fehlerhaft"
+
+msgid "Healthy"
+msgstr "Gesund"
+
+msgid "Submit changes?"
+msgstr "Änderungen absenden?"
+
+msgid "Submit changes"
+msgstr "Änderungen übernehmen"
+
+msgid "Node details"
+msgstr "Knotendetails"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Node UUID"
+msgstr "Knoten UUID"
+
+msgid "Node IP"
+msgstr "Knoten IP"
+
+msgid "Internal IP"
+msgstr "Interne IP"
+
+msgid "Capacity"
+msgstr "Kapazität"
+
+msgid "SX version"
+msgstr "SX Version"
+
+msgid "Adding a new node"
+msgstr "Neuen Knoten hinzufügen"
+
+msgid "Add node"
+msgstr "Knoten hinzufügen"
+
+msgid "Modifying a node"
+msgstr "Knoten ändern"
+
+msgid "Modify"
+msgstr "Ändern"
+
+msgid "Restore"
+msgstr ""
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Add zone"
+msgstr "Zone hinzufügen"
+
+msgid "Delete zone?"
+msgstr "Zone löschen?"
+
+msgid "Zone {{name}} will be deleted."
+msgstr "Die Zone {{name}} wird gelöscht"
+
+msgid "This zone is empty."
+msgstr "Diese Zone ist leer."
+
+msgid "Zone name"
+msgstr "Zonenname"
+
+msgid "This is not a valid zone name."
+msgstr "Dies ist kein gültiger Zonenname"
+
+msgid "This zone already exists."
+msgstr "Diese Zone existiert bereits"
+
+msgid "This zone name is too long."
+msgstr "Der Zonenname ist zu lang."
+
+msgid "Rename zone"
+msgstr "Zone umbenennen"
+
+msgid "Rename"
+msgstr "Umbennenen"
+
+msgid "New node"
+msgstr "Neuer Knoten"
+
+msgid "Set up node replacement"
+msgstr "Ersatzknoten konfigurieren"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "Undo"
+msgstr "Rückgängig"
+
+msgid "New ip: {{ip}}"
+msgstr "Neue IP: {{ip}}"
+
+msgid "{{operation}} in progress"
+msgstr "{{operation}} wird ausgeführt"
+
+msgid "There are nodes that need your attention!"
+msgstr "Einige Knoten erfordern Aufmerksamkeit!"
+
+msgid "Certain cluster management operations may be unavailable."
+msgstr "Einige Cluster-Management Operationen sind möglicherweise nicht verfügbar."
+
+msgid "This node is faulty and needs to be replaced."
+msgstr "Dieser Knoten ist fehlerhaft und muss ersetzt werden."
+
+msgid "This node is not responding."
+msgstr "Dieser Knoten antwortet nicht."
+
+msgid "(zoneless)"
+msgstr "(keine Zonen)"
+
+msgid "Node size"
+msgstr "Knoten Größe"
+
+msgid "This is not a valid IP address"
+msgstr "Dies ist keine gültige IP adresse"
+
+msgid "Node internal IP"
+msgstr "Interne Knoten IP"
+
+msgid "This is not a valid size"
+msgstr "Dies ist keine gültige Größe"
+
+msgid "Cluster name"
+msgstr "Clustername"
+
+msgid "Administrator rights"
+msgstr "Administratorrechte"
+
+msgid "Remove from admins"
+msgstr "Lösche aus Administratoren"
+
+msgid "Make administrator"
+msgstr "Zu Administrator machen"
+
+msgid "Stored data"
+msgstr "Gespeicherte Daten"
+
+msgid "System load average"
+msgstr "Durchschnittliche Systemlast"
+
+msgid "Memory free"
+msgstr "Freier Arbeitsspeicher"
+
+msgid "Memory used"
+msgstr "Verwendeter Arbeitsspeicher"
+
+msgid "Disk free"
+msgstr "Freier Festplattenspeicher"
+
+msgid "Disk usage"
+msgstr "Belegter Festplattenspeicher"
+
+msgid "Incoming traffic"
+msgstr "Eingehender Datenverkehr"
+
+msgid "Outgoing traffic"
+msgstr "Ausgehender Datenverkehr"
+
+msgid "Task status"
+msgstr "Aufgabenstatus"
+
+msgid "Task"
+msgstr "Aufgabe"
+
+msgid "(ID: {{id}})"
+msgstr "(ID: {{id}})"
+
+msgid "Added"
+msgstr "Hinzugefügt"
+
+msgid "Start date"
+msgstr "Startdatum"
+
+msgid "End date"
+msgstr "Enddatum"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Last check: {{when}}"
+msgstr "Letzte Prüfung: {{when}}"
+
+msgid "(optional)"
+msgstr "(optional)"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+msgid "Read"
+msgstr "Lesen"
+
+msgid "The user can read files on the volume"
+msgstr "Der Benutzer kann Dateien in dem Volumes lesen"
+
+msgid "Write"
+msgstr "Schreiben"
+
+msgid "The user can modify files on the volume"
+msgstr "Der Benutzer kann Dateien in dem Volume verändern"
+
+msgid "Manager"
+msgstr "Verwalten"
+
+msgid "The user can manage permissions of other users on this volume"
+msgstr ""
+"Der Benutzer kann Berechtigungen anderer Benutzer auf diesem Volume "
+"verändern"

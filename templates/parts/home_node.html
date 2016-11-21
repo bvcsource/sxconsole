@@ -1,0 +1,99 @@
+{% load i18n sizefieldtags %}
+
+<div class="node-info well">
+    {% if node.down %}
+        <div class="node-info__heading text-danger">
+            <span class="fa fa-bomb"></span>
+            {% blocktrans trimmed with ip=node.public_ip %}
+                Node {{ ip }}
+            {% endblocktrans %}
+            {% if node.private_ip %}
+                {% blocktrans trimmed with ip=node.private_ip %}
+                    <small>(inter-node: {{ ip }})</small>
+                {% endblocktrans %}
+            {% endif %}
+            {% if node.faulty %}
+                <small class="label label-danger">
+                    {% trans "faulty" %}
+                </small>
+            {% endif %}
+        </div>
+        <div class="node-info__body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="bold text-danger">
+                        {% trans "This node is down!" %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="node-info__heading">
+            <a class="text-normal" href="#{{ forloop.parentloop.counter }}-{{ node.uuid }}" data-toggle="collapse">
+                <span class="fa fa-database"></span>
+                {% blocktrans trimmed with ip=node.public_ip %}
+                    Node {{ ip }}
+                {% endblocktrans %}
+                {% if node.private_ip %}
+                    {% blocktrans trimmed with ip=node.private_ip %}
+                        <small>(inter-node: {{ ip }})</small>
+                    {% endblocktrans %}
+                {% endif %}
+                {% if node.faulty %}
+                    <small class="label label-danger">
+                        {% trans "faulty" %}
+                    </small>
+                {% endif %}
+            </a>
+        </div>
+
+        <div id="{{ forloop.parentloop.counter }}-{{ node.uuid }}" class="node-info__body collapse">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>
+                        <span class="bold"> {% trans "System" %}: </span>
+                        {{ node.system }}
+                        <br>
+                        <span class="bold"> {% trans "Local time" %}: </span>
+                        {{ node.local_time }}
+                    </p>
+
+                    <p>
+                        <span class="bold"> {% trans "CPU Cores" %}: </span>
+                        {{ node.cores }}
+                        <br>
+                        <span class="bold"> {% trans "RAM" %}: </span>
+                        {{ node.memory | filesize }}
+                        <br>
+                        <span class="bold"> {% trans "Disk usage" %}: </span>
+                        {{ node.used_space | filesize }}
+                        {% blocktrans trimmed with free_space=node.free_space|filesize %}
+                            ({{ free_space }} free)
+                        {% endblocktrans %}
+                        <br>
+                        <span class="bold"> {% trans "Virtual size" %}: </span>
+                        {{ node.capacity | filesize }}
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    <p>
+                        <span class="bold"> {% trans "SX version" %}: </span>
+                        {{ node.sx_version }}
+                        <br>
+                        <span class="bold"> {% trans "SX-Storage version" %}: </span>
+                        {{ node.hashfs_version }}
+                    </p>
+
+                    <p>
+                        <span class="bold"> {% trans "Node UUID" %}: </span>
+                        <br> <code>{{ node.uuid }}</code>
+                        <br>
+                        <span class="bold"> {% trans "SX-Storage path" %}: </span>
+                        <br> <code>{{ node.storage_path }}</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>

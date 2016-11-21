@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block main %}
+    {% include 'clusters/logs/header.html' %}
+    <div id="access-log-content"></div>
+{% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/clusterLogs.js' %}" defer></script>
+    <script>
+        window._accessLogResultsUrl = '{% url "access_logs_result" cluster.pk "__task_id__" %}'
+    </script>
+{% endblock scripts %}

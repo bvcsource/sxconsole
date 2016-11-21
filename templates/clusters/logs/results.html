@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n staticfiles %}
+
+{% block main %}
+    {% include 'clusters/logs/header.html' %}
+
+    <div id="access-log-content">
+        <table class="table table-bordered table-striped table-condensed logs-table">
+            <thead>
+                <tr>
+                    <th>{% trans "Date" %}</th>
+                    <th>{% trans "User" %}</th>
+                    <th>{% trans "Operation" %}</th>
+                    <th class="logs-table__path">{% trans "Path" %}</th>
+                    <th>{% trans "User agent" %}</th>
+                    <th>{% trans "IP address" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for e in page %}
+                    <tr>
+                        <td>{{ e.datetime | date:'d b Y H:i' }}</td>
+                        <td>{{ e.user }}</td>
+                        <td>{{ e.get_operation_display }}</td>
+                        <td class="logs-table__path" title="{{ e.full_path }}">{{ e.full_path }}</td>
+                        <td>{{ e.user_agent }}</td>
+                        <td>{{ e.ip }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% include 'includes/pagination_nav.html' %}
+    </div>
+{% endblock main %}
+
+{% block scripts %}
+    <script src="{% static 'sxconsole/clusterLogs.js' %}" defer></script>
+    <script>
+        window._accessLogResultsUrl = '{% url "access_logs_result" cluster.pk "__task_id__" %}'
+    </script>
+{% endblock scripts %}

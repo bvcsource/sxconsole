@@ -1,0 +1,27 @@
+
+
+$ps-rail-default-opacity: 0.6;
+$ps-rail-hover-bg: transparent;
+
+$ps-scrollbar-x-height: 6px;
+$ps-scrollbar-x-hover-height: $ps-scrollbar-x-height;
+$ps-scrollbar-x-bottom: 6px;
+
+$ps-scrollbar-y-width: 6px;
+$ps-scrollbar-y-hover-width: $ps-scrollbar-y-width;
+$ps-scrollbar-y-right: 3px;
+@import '~perfect-scrollbar/src/css/main.scss';
+.ps-container {
+    // Fix for https://github.com/noraesae/perfect-scrollbar/issues/524
+    -ms-touch-action: initial;
+    touch-action: initial;
+}
+
+
+// Custom utility classes:
+
+.scrollbar-x-container {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+}
